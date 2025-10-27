@@ -25,10 +25,8 @@
       }
     }
   </script>
-  <!-- Google fonts used in the design -->
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
-    /* small extras to match the visual style */
     .hero-bg { background-image: url('/mnt/data/04_Destinationt.jpg'); }
     .glass { backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
     .card-title { font-family: 'Pacifico', cursive; }
@@ -349,7 +347,6 @@
       guestInput.value = v + 1;
     });
 
-    // small form behaviour: prevent page reload for demo
     document.querySelector('form').addEventListener('submit', (e) => {
       e.preventDefault();
       alert('Search submitted — demo only');
