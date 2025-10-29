@@ -18,6 +18,21 @@
       src="https://kit.fontawesome.com/2ce14ed893.js"
       crossorigin="anonymous"
     ></script>
+    <style>
+      @keyframes move-anim-1 {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-50px);
+        }
+      }
+
+      .animate-move-anim-1 {
+        animation: move-anim-1 7s ease-in-out infinite;
+      }
+    </style>
   </head>
 
   <body class="bg-white font-body">
@@ -42,7 +57,9 @@
             <a class="cursor-pointer hover:text-red-400" href="">Pages</a>
           </li>
           <li>
-            <a class="cursor-pointer hover:text-red-400" href="contact.html">Contact</a>
+            <a class="cursor-pointer hover:text-red-400" href="contact.html"
+              >Contact</a
+            >
           </li>
         </ul>
         <ul class="flex justify-evenly items-center gap-2 text-xs">
@@ -197,7 +214,7 @@
         </div>
 
         <img
-          class="h-24 absolute right-1/4"
+          class="animate-move-anim-1 inline-block will-change-transform m-0 p-0 h-24 absolute left-[77%]"
           src="../images/unnamed-removebg-preview.png"
           alt="camera"
         />
@@ -374,7 +391,7 @@
       <img
         src="https://klooktravel.com/wp-content/themes/klooktravel/images/icon-parachute.png"
         alt="icon"
-        class="absolute right-10 animate-"
+        class="w-12 animate-move-anim-1 inline-block will-change-transform m-0 p-0 relative -right-[93%]"
       />
     </section>
 
@@ -784,7 +801,7 @@
               <img
                 src="https://klooktravel.com/wp-content/themes/klooktravel/images/icon-star.png"
                 alt="icon"
-                class="w-12 move-anim-1"
+                class="w-12 animate-move-anim-1 inline-block will-change-transform m-0 p-0 relative right-4"
               />
             </div>
           </div>
@@ -1019,7 +1036,7 @@
           <img
             src="https://klooktravel.com/wp-content/themes/klooktravel/images/icon-boat.png"
             alt="icon"
-            class="move-anim-1"
+            class="animate-move-anim-1 inline-block will-change-transform m-0 p-0 relative left-8"
           />
         </figure>
         <div class="text-center mb-12 lg:mb-16">

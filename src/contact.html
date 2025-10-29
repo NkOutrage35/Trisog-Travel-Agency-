@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/2ce14ed893.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .header-bg {
+        background-image: url("../images/contact-hero-img.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+      .map-container {
+        position: relative;
+        padding-bottom: 75%;
+        height: 0;
+        overflow: hidden;
+      }
+      .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <header
+      class="bg-white text-base text-blue-950 border-b border-gray-300 w-full h-20 z-50 sticky top-0 align-top"
+    >
+      <nav class="navbar p-3 flex items-center justify-between max-[90%] mx-12">
+        <img src="/images/Slice_5-removebg-preview.png" class="logo" />
+        <ul class="flex gap-5 mr-64 -ml-32">
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="index.html"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="">Tours</a>
+          </li>
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="">Destination</a>
+          </li>
+          <li><a class="cursor-pointer hover:text-red-400" href="">Blog</a></li>
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="">About</a>
+          </li>
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="">Pages</a>
+          </li>
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="contact.html"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <ul class="flex justify-evenly items-center gap-2 text-xs">
+          <li>
+            <i class="fa-solid fa-magnifying-glass flex cursor-pointer"></i>
+          </li>
+          <li><i class="fa-regular fa-user cursor-pointer"></i></li>
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="">LogIn</a>
+          </li>
+          <span class="cursor-pointer hover:text-red-400">/</span>
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="">SignUp</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section
+      class="header-bg relative h-64 flex items-center justify-center text-white"
+    >
+      <div class="absolute inset-0 bg-blue-900 opacity-60"></div>
+
+      <div class="relative z-10 text-center">
+        <h1 class="text-5xl font-bold mb-2">Contact Us</h1>
+        <p class="text-base">
+          <a class="cursor-pointer hover:text-red-400" href="index.html"
+            >Home</a
+          >
+          <a class="cursor-pointer" href="">/</a>
+          <a class="cursor-pointer hover:text-red-400" href="">Contact</a>
+        </p>
+      </div>
+      <div class="absolute bottom-0 z-0"></div>
+    </section>
+
+    <main class="container mx-auto px-4 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div class="p-12 bg-gray-50 rounded-lg flex-col items-start">
+          <img
+            src="../images/location_on_36dp_EA3323_FILL0_wght400_GRAD0_opsz40.svg"
+            alt="Phone"
+            class="mr-4 my-4"
+          />
+          <div>
+            <p class="text-gray-700 font-semibold text-lg">Location</p>
+            <p class="text-gray-500 text-sm">210, Love Street, Muscat, Oman</p>
+          </div>
+        </div>
+
+        <div class="p-12 bg-gray-50 rounded-lg flex-col items-start">
+          <img
+            src="../images/phone_in_talk_36dp_EA3323_FILL0_wght400_GRAD0_opsz40.svg"
+            alt="Phone"
+            class="mr-4 my-4"
+          />
+          <div>
+            <p class="text-gray-700 font-semibold text-lg">Phone</p>
+            <p class="text-gray-500 text-sm">+968 98888033</p>
+          </div>
+        </div>
+
+        <div class="p-12 bg-gray-50 rounded-lg flex-col items-start">
+          <img
+            src="../images/mail_36dp_EA3323_FILL0_wght400_GRAD0_opsz40.svg"
+            alt="Phone"
+            class="mr-4 my-4"
+          />
+          <div>
+            <p class="text-gray-700 font-semibold text-lg">Email</p>
+            <p class="text-gray-500 text-sm">support@onivag.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+          <p class="text-red-500 font-medium italic mb-1">Have any question?</p>
+          <h2 class="text-4xl font-extrabold text-gray-800 mb-8">
+            Get in Touch
+          </h2>
+
+          <form class="space-y-6">
+            <div class="flex flex-col md:flex-row gap-6">
+              <input
+                type="text"
+                placeholder="Your name"
+                class="flex-1 p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Email address"
+                class="flex-1 p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                required
+              />
+            </div>
+
+            <div>
+              <textarea
+                placeholder="Write something..."
+                rows="6"
+                class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                required
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-auto px-10 py-3 bg-red-500 text-white font-bold rounded-lg hover:bg-red-600 transition duration-300"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+
+        <div class="map-container rounded-lg overflow-hidden shadow-xl">
+          <iframe
+            src="https://maps.google.com/maps?q=The%20Hague&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            frameborder="0"
+            style="border: 0"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          >
+          </iframe>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-[#0f0f0f] text-gray-300">
+      <div class="max-w-7xl mx-auto px-6 py-12">
+        <div
+          class="flex flex-col md:flex-row md:items-start md:divide-x md:divide-gray-800"
+        >
+          <div class="md:w-1/4 md:pr-6 pb-8 md:pb-0">
+            <div class="flex items-center gap-3 mb-6">
+              <div
+                class="w-9 h-9 flex items-center justify-center rounded-full"
+                style="background-color: #f6c844"
+              >
+                <img src="" />
+              </div>
+              <span class="text-white font-semibold text-lg">Trisog</span>
+            </div>
+
+            <p class="text-sm text-gray-400 italic mb-2">Need any help?</p>
+            <p class="text-yellow-400 font-semibold mb-4">
+              Call Us: <span class="text-yellow-300">(888) 1234 5678</span>
+            </p>
+
+            <address class="not-italic text-sm text-gray-400 mb-4">
+              Love Street, Muscat, Oman<br />
+              example@trisog.com
+            </address>
+
+            <div class="flex gap-3">
+              <a
+                aria-label="facebook"
+                href="#"
+                class="p-2 bg-gray-800 rounded-sm hover:bg-gray-700"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                aria-label="twitter"
+                href="#"
+                class="p-2 bg-gray-800 rounded-sm hover:bg-gray-700"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                aria-label="linkedin"
+                href="#"
+                class="p-2 bg-gray-800 rounded-sm hover:bg-gray-700"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="md:w-2/4 md:px-6 pb-8 md:pb-0">
+            <div class="grid grid-cols-3 gap-6">
+              <div>
+                <h4 class="text-sm text-gray-300 font-medium mb-4">Company</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                  <li><a href="#" class="hover:text-white">About Us</a></li>
+                  <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                  <li>
+                    <a href="#" class="hover:text-white">Travel Guides</a>
+                  </li>
+                  <li><a href="#" class="hover:text-white">Data Policy</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="text-sm text-gray-300 font-medium mb-4">
+                  Top Destination
+                </h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                  <li><a href="#" class="hover:text-white">Las Vegas</a></li>
+                  <li>
+                    <a href="#" class="hover:text-white">New York City</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white">San Francisco</a>
+                  </li>
+                  <li><a href="#" class="hover:text-white">Hawaii</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="text-sm text-gray-300 font-medium mb-4">
+                  Top Destination
+                </h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                  <li><a href="#" class="hover:text-white">Tokyo</a></li>
+                  <li><a href="#" class="hover:text-white">Sydney</a></li>
+                  <li><a href="#" class="hover:text-white">Melbourne</a></li>
+                  <li><a href="#" class="hover:text-white">Dubai</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:w-1/4 md:pl-6">
+            <div class="pr-0 md:pr-6">
+              <h4 class="text-sm text-gray-300 font-medium mb-4">
+                Sign up Newsletter
+              </h4>
+
+              <form class="block items-center">
+                <label for="email" class="sr-only">Email</label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Enter email..."
+                  required
+                  class="flex-1 px-3 py-2 rounded-md bg-gray-200 border border-gray-700 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                />
+
+                <button
+                  type="submit"
+                  class="px-4 py-2 mt-4 rounded-md bg-yellow-400 text-gray-900 font-semibold hover:opacity-95"
+                >
+                  Submit
+                </button>
+              </form>
+
+              <p class="text-xs text-gray-500 mt-6">
+                © 2023 Trisog All Rights Reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
