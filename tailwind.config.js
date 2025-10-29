@@ -1,22 +1,23 @@
 // tailwind.config.js
 module.exports = {
-  content: [
-    "./**/*.{html,js}", // Tells Tailwind to scan all .html files in the current folder
-  ],
+  content: ["./**/*.{html,js}"],
   theme: {
     extend: {
+      
       fontFamily: {
         body: ["Roboto"],
         accent: ["Nothing You Could Do", "cursive"],
       },
+      // 1. Keyframes Definition
       keyframes: {
-        float: {
+        "move-anim-1": {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-50px)" },
         },
       },
+      // 2. Animation Utility Definition (Fixed!)
       animation: {
-        float: "float 3s ease-in-out infinite",
+        "move-anim-1": "move-anim-1 3s ease-in-out infinite",
       },
     },
   },
