@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Trisog — Destination (Recreation)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Tailwind config: custom colors, font stacks similar to the design
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: "#07143F",
+              accent: "#FB6B6B",
+              muted: "#F3F6F9",
+              footer: "#0f0f10",
+            },
+            fontFamily: {
+              sans: ["Poppins", "system-ui", "Arial"],
+              display: ["Playfair Display", "serif"],
+              script: ['"Pacifico"', "cursive"],
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .hero-bg {
+        background-image: url("/mnt/data/04_Destinationt.jpg");
+      }
+      .glass {
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+      }
+      .card-title {
+        font-family: "Pacifico", cursive;
+      }
+      .overlay-gradient {
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 40%,
+          rgba(0, 0, 0, 0.65) 100%
+        );
+      }
+    </style>
+  </head>
+  <body class="antialiased text-gray-700 bg-white">
+    <!-- Top contact strip -->
+    <div class="bg-gray-100 text-sm text-gray-600 sticky top-0 align-top z-50">
+      <div
+        class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center"
+      >
+        <div>(000)999-898-999 &nbsp; | &nbsp; info@trisog.com</div>
+        <div class="flex items-center space-x-3">
+          <div class="hidden sm:flex items-center space-x-4 text-xs">
+            <a href="#" class="hover:underline">Twitter</a>
+            <a href="#" class="hover:underline">LinkedIn</a>
+            <a href="#" class="hover:underline">GBP</a>
+          </div>
+          <div class="text-xs">EUR <span class="ml-1">▾</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <header
+      class="bg-white text-base text-blue-950 border-b border-gray-300 w-full h-20 z-50 sticky top-9 align-top"
+    >
+      <nav class="navbar p-3 flex items-center justify-between max-[90%] mx-12">
+        <img src="/images/Slice_5-removebg-preview.png" class="logo" />
+        <ul class="flex gap-5 mr-64 -ml-32">
+          <li><a class="cursor-pointer hover:text-red-400" href="index.html">Home</a></li>
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="">Tours</a>
+          </li>
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="destination.html"
+              >Destination</a
+            >
+          </li>
+          <li><a class="cursor-pointer hover:text-red-400" href="">Blog</a></li>
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="about.html"
+              >About</a
+            >
+          </li>
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="">Pages</a>
+          </li>
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="contact.html"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <ul class="flex justify-evenly items-center gap-2 text-xs">
+          <li>
+            <i class="fa-solid fa-magnifying-glass flex cursor-pointer"></i>
+          </li>
+          <li><i class="fa-regular fa-user cursor-pointer"></i></li>
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="">LogIn</a>
+          </li>
+          <span class="cursor-pointer hover:text-red-400">/</span>
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="">SignUp</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero-bg bg-center bg-cover h-64 relative">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div
+        class="max-w-7xl mx-auto h-full px-6 flex flex-col justify-center relative z-10"
+      >
+        <h1 class="text-white text-4xl md:text-6xl font-extrabold text-center">
+          Destination
+        </h1>
+        <div class="text-sm text-white/80 text-center mt-2">
+          Home / <span class="text-red-400">Destination</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search card overlapping hero -->
+    <div class="max-w-7xl mx-auto px-6 -mt-10 relative z-20">
+      <div
+        class="glass bg-white/70 rounded-xl shadow-xl border border-white/30 p-4"
+      >
+        <form class="grid grid-cols-1 md:grid-cols-6 gap-3 items-center">
+          <div class="md:col-span-2">
+            <label class="text-xs text-gray-500">Destination</label>
+            <div class="mt-1 relative">
+              <input
+                type="text"
+                placeholder="Where to go?"
+                class="w-full rounded-lg border p-3 text-sm bg-white/90"
+              />
+              <span class="absolute left-3 top-3 text-gray-400"></span>
+            </div>
+          </div>
+          <div class="md:col-span-1">
+            <label class="text-xs text-gray-500">Type</label>
+            <select
+              class="w-full mt-1 rounded-lg border p-3 text-sm bg-white/90"
+            >
+              <option>Activity</option>
+              <option>City</option>
+              <option>Nature</option>
+            </select>
+          </div>
+          <div class="md:col-span-1">
+            <label class="text-xs text-gray-500">When</label>
+            <input
+              id="dateInput"
+              type="date"
+              class="w-full mt-1 rounded-lg border p-2 text-sm bg-white/90"
+            />
+          </div>
+          <div class="md:col-span-1">
+            <label class="text-xs text-gray-500">Guests</label>
+            <div
+              class="mt-1 flex items-center border rounded-lg w-full p-2 bg-white/90"
+            >
+              <button type="button" id="decGuest" class="px-2">-</button>
+              <input
+                id="guestCount"
+                type="number"
+                value="0"
+                min="0"
+                class="w-full text-center text-sm outline-none"
+              />
+              <button type="button" id="incGuest" class="px-2">+</button>
+            </div>
+          </div>
+          <div class="md:col-span-1 flex justify-end">
+            <button
+              type="submit"
+              class="bg-red-400 hover:bg-red-500 text-white font-semibold rounded-lg px-6 py-3"
+            >
+              Search
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Gallery grid -->
+    <main class="max-w-7xl mx-auto px-6 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <!-- Row 1: three images + tall image -->
+        <article class="md:col-span-3">
+          <div class="relative rounded overflow-hidden shadow">
+            <img
+              src="https://images.unsplash.com/photo-1505765055874-6c4d8f320c2a?q=80&w=1200&auto=format&fit=crop"
+              alt="London Eye"
+              class="w-full h-48 object-cover"
+            />
+            <div class="absolute inset-0 overlay-gradient flex items-end p-4">
+              <div>
+                <div class="text-xs text-white/80">174,688 Travelers</div>
+                <div class="text-white text-lg card-title">United Kingdom</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="md:col-span-3">
+          <div class="relative rounded overflow-hidden shadow">
+            <img
+              src="https://images.unsplash.com/photo-1544832088-2f9c65d1d9d6?q=80&w=1200&auto=format&fit=crop"
+              alt="Turkey"
+              class="w-full h-48 object-cover"
+            />
+            <div class="absolute inset-0 overlay-gradient flex items-end p-4">
+              <div>
+                <div class="text-xs text-white/80">174,688 Travelers</div>
+                <div class="text-white text-lg card-title">Turkey</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="md:col-span-3">
+          <div class="relative rounded overflow-hidden shadow">
+            <img
+              src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop"
+              alt="Switzerland"
+              class="w-full h-48 object-cover"
+            />
+            <div class="absolute inset-0 overlay-gradient flex items-end p-4">
+              <div>
+                <div class="text-xs text-white/80">174,688 Travelers</div>
+                <div class="text-white text-lg card-title">Switzerland</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="md:col-span-3">
+          <div class="relative rounded overflow-hidden shadow h-full">
+            <img
+              src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1200&auto=format&fit=crop"
+              alt="France"
+              class="w-full h-full object-cover min-h-[336px]"
+            />
+            <div class="absolute inset-0 overlay-gradient flex items-end p-4">
+              <div>
+                <div class="text-xs text-white/80">174,688 Travelers</div>
+                <div class="text-white text-lg card-title">France</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Row 2: two medium images -->
+        <article class="md:col-span-4">
+          <div class="relative rounded overflow-hidden shadow">
+            <img
+              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop"
+              alt="Thailand"
+              class="w-full h-48 object-cover"
+            />
+            <div class="absolute inset-0 overlay-gradient flex items-end p-4">
+              <div>
+                <div class="text-xs text-white/80">174,688 Travelers</div>
+                <div class="text-white text-lg card-title">Thailand</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="md:col-span-8">
+          <div class="relative rounded overflow-hidden shadow">
+            <img
+              src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e0d5?q=80&w=1600&auto=format&fit=crop"
+              alt="Australia"
+              class="w-full h-48 object-cover"
+            />
+            <div class="absolute inset-0 overlay-gradient flex items-end p-4">
+              <div>
+                <div class="text-xs text-white/80">174,688 Travelers</div>
+                <div class="text-white text-lg card-title">Australia</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Row 3: large left + grid right -->
+        <article class="md:col-span-3">
+          <div class="relative rounded overflow-hidden shadow h-full">
+            <img
+              src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1200&auto=format&fit=crop"
+              alt="UAE"
+              class="w-full h-[420px] object-cover"
+            />
+            <div class="absolute inset-0 overlay-gradient flex items-end p-4">
+              <div>
+                <div class="text-xs text-white/80">174,688 Travelers</div>
+                <div class="text-white text-lg card-title">
+                  United Arab Emirates
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="md:col-span-9 grid grid-cols-3 gap-6">
+          <article class="col-span-1">
+            <div class="relative rounded overflow-hidden shadow">
+              <img
+                src="https://images.unsplash.com/photo-1508051123996-69f8caf4891d?q=80&w=1200&auto=format&fit=crop"
+                alt="Italy"
+                class="w-full h-32 object-cover"
+              />
+              <div class="absolute inset-0 overlay-gradient flex items-end p-3">
+                <div>
+                  <div class="text-xs text-white/80">174,688 Travelers</div>
+                  <div class="text-white card-title">Italy</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-span-1">
+            <div class="relative rounded overflow-hidden shadow">
+              <img
+                src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop"
+                alt="Bangladesh"
+                class="w-full h-32 object-cover"
+              />
+              <div class="absolute inset-0 overlay-gradient flex items-end p-3">
+                <div>
+                  <div class="text-xs text-white/80">174,688 Travelers</div>
+                  <div class="text-white card-title">Bangladesh</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-span-1">
+            <div class="relative rounded overflow-hidden shadow">
+              <img
+                src="https://images.unsplash.com/photo-1549880184-86f0e9a8d7b7?q=80&w=1200&auto=format&fit=crop"
+                alt="Egypt"
+                class="w-full h-32 object-cover"
+              />
+              <div class="absolute inset-0 overlay-gradient flex items-end p-3">
+                <div>
+                  <div class="text-xs text-white/80">174,688 Travelers</div>
+                  <div class="text-white card-title">Egypt</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-span-1">
+            <div class="relative rounded overflow-hidden shadow">
+              <img
+                src="https://images.unsplash.com/photo-1505483531331-2b2d6b9ae1f8?q=80&w=1200&auto=format&fit=crop"
+                alt="India"
+                class="w-full h-32 object-cover"
+              />
+              <div class="absolute inset-0 overlay-gradient flex items-end p-3">
+                <div>
+                  <div class="text-xs text-white/80">174,688 Travelers</div>
+                  <div class="text-white card-title">India</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-span-2">
+            <div class="relative rounded overflow-hidden shadow">
+              <img
+                src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1600&auto=format&fit=crop"
+                alt="China"
+                class="w-full h-32 object-cover"
+              />
+              <div class="absolute inset-0 overlay-gradient flex items-end p-3">
+                <div>
+                  <div class="text-xs text-white/80">174,688 Travelers</div>
+                  <div class="text-white card-title">China</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-footer text-gray-200 mt-24">
+      <div
+        class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-8"
+      >
+        <div>
+          <div class="flex items-center space-x-3">
+            <!-- <div class="w-10 h-10 bg-gradient-to-r from-red-500 to-pink-400 rounded-full flex items-center justify-center text-white font-bold">TR</div>-->
+            <div class="text-white font-bold"><img src="" alt="logo" /></div>
+          </div>
+          <p class="mt-4 text-sm text-gray-300">
+            Need any help?<br /><span class="text-red-400 font-semibold"
+              >Call Us: (888)1234 5678</span
+            >
+          </p>
+          <p class="mt-4 text-xs text-gray-400">
+            Love Street, Muscat, Oman<br />example@trisog.com
+          </p>
+          <div class="mt-4 flex space-x-3 text-gray-400 text-sm">
+            <a href="#">facebook</a>
+            <a href="#">twitter</a>
+            <a href="#">linkedin</a>
+          </div>
+        </div>
+
+        <div class="border-l border-gray-700 pl-6">
+          <h4 class="text-white font-semibold mb-4">Company</h4>
+          <ul class="text-sm text-gray-400 space-y-2">
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Travel Guides</li>
+            <li>Data Policy</li>
+          </ul>
+        </div>
+
+        <div class="border-l border-gray-700 pl-6">
+          <h4 class="text-white font-semibold mb-4">Top Destination</h4>
+          <div class="grid grid-cols-2 text-sm text-gray-400 gap-2">
+            <div>Las Vegas</div>
+            <div>Tokyo</div>
+            <div>New York City</div>
+            <div>Sydney</div>
+            <div>San Francisco</div>
+            <div>Melbourne</div>
+            <div>Hawaii</div>
+            <div>Dubai</div>
+          </div>
+        </div>
+
+        <div class="pl-6">
+          <h4 class="text-white font-semibold mb-4">Sign up Newsletter</h4>
+          <form class="flex flex-col space-y-3">
+            <input
+              type="email"
+              placeholder="Enter email..."
+              class="rounded p-3 text-sm bg-white/5 border border-white/5"
+            />
+            <button class="bg-red-400 py-2 rounded text-white font-medium">
+              Submit
+            </button>
+          </form>
+          <p class="text-xs text-gray-500 mt-6">
+            © 2023 Trisog All Right Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Guest counter interactions
+      const decBtn = document.getElementById("decGuest");
+      const incBtn = document.getElementById("incGuest");
+      const guestInput = document.getElementById("guestCount");
+
+      decBtn.addEventListener("click", () => {
+        let v = parseInt(guestInput.value || 0);
+        if (v > 0) guestInput.value = v - 1;
+      });
+      incBtn.addEventListener("click", () => {
+        let v = parseInt(guestInput.value || 0);
+        guestInput.value = v + 1;
+      });
+
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("Search submitted — demo only");
+      });
+    </script>
+  </body>
+</html>
