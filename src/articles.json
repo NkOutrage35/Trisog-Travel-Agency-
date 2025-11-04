@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "The Impact of Covid-19 on travel & turisom industry",
+    "date": "July 13, 2023",
+    "author": "Admin",
+    "image_url": "../images/people looking at map.jpg",
+    "image_alt": "People discussing on a map",
+    "tags": ["Destination", "Museums", "Sports"],
+    "content": "<p>Laboratories used for scientific research take many forms because of the differing requirements of specialists in the various fields of science and engineering. A physics laboratory sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, aperiam ipsaque ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim voluptatem voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit</p><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, aperiam ipsaque ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p><p>Laboratories used for scientific research take many forms because of the differing requirements of specialists in the various fields of science and engineering. A physics laboratory sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, aperiam ipsaque ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim voluptatem voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit</p><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, aperiam ipsaque ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+    "comments": [
+      {
+        "author": "Jonathan Doe",
+        "date": "April 22, 2023",
+        "avatar_url": "../images/resume-reviewer-3.png",
+        "body": "Objectively productivate just in time information with dynamic channels. Energistically exploit seamless growth strategies after 24/7 experiences."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Global Tourism in Crisis: How COVID-19 Reshaped Travel Patterns",
+    "date": "August 5, 2023",
+    "author": "Travel Analyst",
+    "image_url": "../images/empty-airport-terminal.jpg",
+    "image_alt": "Empty airport terminal during pandemic",
+    "tags": ["Aviation", "Global Tourism", "Recovery"],
+    "content": "<p>The COVID-19 pandemic brought international travel to a near standstill, with global tourism experiencing an unprecedented collapse. Airlines grounded fleets, hotels shuttered their doors, and popular destinations became ghost towns overnight. The industry faced losses exceeding $4 trillion, making this the worst crisis in tourism history.</p><p>Border closures and travel restrictions created a domino effect across the entire tourism ecosystem. From tour operators to local artisans dependent on tourist spending, millions of livelihoods were threatened. The sudden halt in international mobility revealed both the fragility and interconnectedness of global tourism networks.</p><p>As countries implemented varying levels of restrictions, domestic tourism emerged as a temporary lifeline for many businesses. However, this shift couldn't compensate for the loss of international visitors in destinations heavily reliant on foreign tourism revenue.</p><p>The pandemic forced a fundamental rethinking of tourism models and highlighted the need for more resilient and sustainable approaches to travel and hospitality management.</p>",
+    "comments": [
+      {
+        "author": "Sarah Chen",
+        "date": "August 15, 2023",
+        "avatar_url": "../images/avatar-sarah-chen.png",
+        "body": "This analysis perfectly captures the systemic vulnerabilities exposed by the pandemic. The shift to domestic tourism was indeed a crucial survival strategy for many businesses."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Digital Transformation in Hospitality: Pandemic-Driven Innovations",
+    "date": "September 12, 2023",
+    "author": "Tech Writer",
+    "image_url": "../images/digital-checkin-hotel.jpg",
+    "image_alt": "Touchless hotel check-in kiosk",
+    "tags": ["Technology", "Hospitality", "Innovation"],
+    "content": "<p>The hospitality sector underwent rapid digital transformation as contactless technologies became essential for survival. Hotels and restaurants implemented QR code menus, mobile check-ins, and enhanced cleaning protocols to reassure cautious travelers.</p><p>Virtual tours and augmented reality experiences allowed potential visitors to explore destinations remotely, while flexible booking policies became the industry standard. These innovations not only addressed immediate health concerns but also improved overall customer experience efficiency.</p><p>The acceleration of digital adoption during the pandemic permanently changed guest expectations. Properties that embraced technology gained competitive advantages, while those slow to adapt faced significant challenges in attracting returning visitors.</p><p>Looking forward, the hybrid digital-physical experience model developed during COVID-19 appears set to define the future of hospitality, blending personalized service with technological convenience.</p>",
+    "comments": [
+      {
+        "author": "Michael Rodriguez",
+        "date": "September 20, 2023",
+        "avatar_url": "../images/avatar-michael-r.png",
+        "body": "The QR code revolution in restaurants was one of the few positive outcomes. Many establishments have kept them even after restrictions lifted due to operational efficiency."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Sustainable Tourism Reset: Environmental Impacts of Travel Slowdown",
+    "date": "October 8, 2023",
+    "author": "Eco Traveler",
+    "image_url": "../images/nature-recovery.jpg",
+    "image_alt": "Nature recovering in absence of tourists",
+    "tags": ["Sustainability", "Environment", "Eco-Tourism"],
+    "content": "<p>While economically devastating, the tourism pause offered unexpected environmental benefits that sparked important conversations about sustainable travel. Popular destinations from Venice to Bali witnessed remarkable ecological recovery with clearer waters and returning wildlife.</p><p>This natural regeneration period prompted destinations to reconsider carrying capacities and implement visitor management strategies. Many are now adopting green certifications and community-based tourism models that distribute benefits more equitably.</p><p>The pandemic created an opportunity to rebuild tourism with greater emphasis on environmental stewardship and local community involvement. Destinations are now balancing economic recovery with preservation of the natural and cultural assets that attract visitors in the first place.</p><p>This reset moment may ultimately lead to more responsible tourism patterns that benefit both travelers and host communities while minimizing environmental footprints.</p>",
+    "comments": [
+      {
+        "author": "Dr. Elena Petrova",
+        "date": "October 25, 2023",
+        "avatar_url": "../images/avatar-elena-p.png",
+        "body": "The environmental recovery observed during lockdowns provides crucial baseline data for sustainable tourism planning. We must not squander this learning opportunity."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Workation Trend: How Remote Work Revolutionized Travel",
+    "date": "November 17, 2023",
+    "author": "Digital Nomad",
+    "image_url": "../images/remote-worker-beach.jpg",
+    "image_alt": "Person working on laptop at beach destination",
+    "tags": ["Remote Work", "Trends", "Accommodation"],
+    "content": "<p>The shift to remote work during the pandemic created an entirely new travel category: the workation. Professionals discovered they could work from anywhere with reliable internet, leading to extended stays in destinations previously visited only for short vacations.</p><p>This trend prompted hotels and destinations to adapt their offerings with dedicated workspaces, high-speed internet packages, and longer-stay discounts. Countries even introduced special digital nomad visas to attract this new type of traveler.</p><p>The workation phenomenon has redistributed tourism spending across seasons and locations, providing economic stability to destinations that previously experienced pronounced peak seasons. It represents a fundamental restructuring of the relationship between work, travel, and lifestyle.</p><p>As hybrid work arrangements become permanent for many companies, the workation trend appears poised for continued growth, creating both opportunities and challenges for destination management.</p>",
+    "comments": [
+      {
+        "author": "James Wilson",
+        "date": "November 30, 2023",
+        "avatar_url": "../images/avatar-james-w.png",
+        "body": "Spent 3 months working from Costa Rica last year - the future of work is definitely mobile. Destinations that cater to digital nomads will thrive in this new era."
+      }
+    ]
+  }
+]
