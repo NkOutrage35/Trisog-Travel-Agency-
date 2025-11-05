@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>United Kingdom | Trisog</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#ff4d4d',
+            dark: '#07143F',
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="font-sans text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center py-3 text-sm">
+      <div class="flex items-center space-x-6 text-gray-500">
+        <span>(000)-9858-9858</span>
+        <span>info@trisog.com</span>
+      </div>
+      <div class="flex items-center space-x-3">
+        <a href="#" class="text-gray-500 hover:text-primary"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-gray-500 hover:text-primary"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="text-gray-500 hover:text-primary"><i class="fab fa-instagram"></i></a>
+        <select class="border rounded px-1 py-0.5 text-gray-600 text-xs">
+          <option>EUR</option>
+          <option>USD</option>
+        </select>
+      </div>
+    </div>
+
+    <nav class="bg-white border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-primary">Trisog</h1>
+        <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
+          <li><a href="#" class="hover:text-primary">Home</a></li>
+          <li><a href="#" class="hover:text-primary">About</a></li>
+          <li><a href="#" class="hover:text-primary">Tours</a></li>
+          <li><a href="#" class="text-primary border-b-2 border-primary pb-1">Destination</a></li>
+          <li><a href="#" class="hover:text-primary">Blog</a></li>
+          <li><a href="#" class="hover:text-primary">Pages</a></li>
+          <li><a href="#" class="hover:text-primary">Contact</a></li>
+        </ul>
+        <div class="flex items-center space-x-4">
+          <button class="text-gray-700 hover:text-primary"></button>
+          <a href="#" class="text-gray-700 hover:text-primary text-sm">Login / Signup</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-[url('https://upload.wikimedia.org/wikipedia/commons/5/5f/Tower_Bridge_London_Feb_2006.jpg')] bg-cover bg-center text-white">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative max-w-7xl mx-auto px-4 py-32 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold">United Kingdom</h2>
+      <p class="text-sm mt-2">
+        <a href="#" class="hover:text-primary">Home</a> / Destination / 
+        <span class="text-primary">United Kingdom</span>
+      </p>
+    </div>
+  </section>
+    <!-- Main Content Section -->
+  <section class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-8">
+    
+    <!-- Left Side: Large Image -->
+    <div class="md:col-span-2 space-y-4">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/London_Eye_Twilight_April_2006.jpg" 
+           alt="London Eye" 
+           class="rounded-lg shadow-md w-full h-80 object-cover" />
+      
+      <!-- Small image gallery -->
+      <div class="grid grid-cols-4 gap-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Tower_of_London_viewed_from_the_River_Thames.jpg" class="rounded-lg object-cover h-28 w-full" alt="">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Big_Ben_2012.jpg" class="rounded-lg object-cover h-28 w-full" alt="">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Stonehenge2007_07_30.jpg" class="rounded-lg object-cover h-28 w-full" alt="">
+        <div class="relative">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/British_Museum_London.jpg" class="rounded-lg object-cover h-28 w-full" alt="">
+          <div class="absolute inset-0 bg-black/60 text-white flex flex-col items-center justify-center rounded-lg">
+            <span class="text-lg font-bold">12+</span>
+            <span class="text-xs">More Photo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side: Map + Weather -->
+    <div class="space-y-6">
+      <!-- Map -->
+      <div class="border rounded-lg overflow-hidden shadow-sm">
+        <h3 class="bg-gray-100 font-semibold px-4 py-2 border-b">City Map</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.274279489546!2d-0.12775838417982334!3d51.50735087963553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b333cafef77%3A0x4f9a0f1c64d8d5f0!2sLondon!5e0!3m2!1sen!2suk!4v1669812345678"
+          width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Weather -->
+      <div class="border rounded-lg shadow-sm">
+        <h3 class="bg-gray-100 font-semibold px-4 py-2 border-b">Weather</h3>
+        <ul class="divide-y">
+          <li class="flex justify-between px-4 py-2 text-sm"><span>Jan - Feb</span><span>12ºc - 18ºc</span></li>
+          <li class="flex justify-between px-4 py-2 text-sm"><span>Mar - Apr</span><span>12ºc - 18ºc</span></li>
+          <li class="flex justify-between px-4 py-2 text-sm"><span>May - Jun</span><span>12ºc - 18ºc</span></li>
+          <li class="flex justify-between px-4 py-2 text-sm"><span>Jul - Aug</span><span>12ºc - 18ºc</span></li>
+          <li class="flex justify-between px-4 py-2 text-sm"><span>Sep - Oct</span><span>12ºc - 18ºc</span></li>
+          <li class="flex justify-between px-4 py-2 text-sm"><span>Nov - Dec</span><span>12ºc - 18ºc</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+    <!-- About UK Section -->
+  <section class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-8">
+    
+    <!-- About Text -->
+    <div class="md:col-span-2">
+      <h3 class="text-2xl font-bold mb-4">About UK</h3>
+      <p class="text-gray-600 leading-relaxed mb-4">
+        Istanbul, the vibrant and historic city straddling the continents of Europe and Asia, offers an enchanting blend of cultures, sights, and experiences that captivate every traveler's heart. As Turkey's cultural and economic hub, Istanbul seamlessly fuses its rich heritage with modernity, creating an unforgettable journey for visitors.
+      </p>
+      <p class="text-gray-600 leading-relaxed">
+        The city is home to some of the world’s most iconic landmarks, including the awe-inspiring Hagia Sophia, the majestic Blue Mosque, and the grand Topkapi Palace, each bearing witness to Istanbul’s illustrious past. Wandering through the bustling streets, you’ll find an array of delightful bazaars, where you can haggle for unique souvenirs, immerse yourself in aromatic spices, and savor traditional Turkish delights. As the sun sets, head to the banks of the Bosphorus strait for a magical view of Istanbul’s skyline, a true testament to its allure as the crossroads between Europe and Asia. Prepare your taste buds for an unforgettable gastronomic adventure in Istanbul, where a delightful fusion of flavors awaits you at every turn.
+      </p>
+    </div>
+
+    <!-- Basic Info Card -->
+    <div class="bg-gray-50 border rounded-lg p-6 shadow-sm">
+      <h3 class="text-xl font-semibold mb-4">Basic Information</h3>
+      <ul class="text-sm text-gray-700 space-y-2">
+        <li class="flex justify-between"><span class="font-medium">Country</span> <span>Turkey</span></li>
+        <li class="flex justify-between"><span class="font-medium">Language</span> <span>Turkish, Kurdish, Arabic, Zaza</span></li>
+        <li class="flex justify-between"><span class="font-medium">Currency</span> <span>Turkish Lira</span></li>
+        <li class="flex justify-between"><span class="font-medium">Area</span> <span>2,036 Square Miles</span></li>
+        <li class="flex justify-between"><span class="font-medium">Population</span> <span>15M</span></li>
+        <li class="flex justify-between"><span class="font-medium">Time Zone</span> <span>UTC+2</span></li>
+        <li class="flex justify-between"><span class="font-medium">Best Time To Visit</span> <span>May, June, July, August</span></li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- Popular Tours Section -->
+  <section class="max-w-7xl mx-auto px-4 py-12">
+    <div class="flex justify-between items-center mb-6">
+      <h3 class="text-2xl font-bold">Popular Tours in UK</h3>
+      <a href="#" class="text-sm text-primary font-medium hover:underline">See All →</a>
+    </div>
+
+    <!-- Tour Cards Grid -->
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+      
+      <!-- Card 1 -->
+      <div class="bg-white border rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Westminster_Abbey_West_Door.jpg" alt="" class="w-full h-44 object-cover">
+        <div class="p-4">
+          <p class="text-sm text-gray-500">Barcelona</p>
+          <h4 class="font-semibold mb-2 text-gray-800">Westminster Walking Tour & Abbey Entry</h4>
+          <div class="flex items-center justify-between text-xs text-gray-500 mb-2">
+            <span>⭐ 4.8 | 15 reviews</span>
+            <span>⏱️ 12+ hour</span>
+          </div>
+          <p class="text-sm text-gray-600">Starting From <span class="font-bold text-gray-800">$520</span></p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white border rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Windsor_Castle_from_the_Long_Walk_2016.jpg" alt="" class="w-full h-44 object-cover">
+        <div class="p-4">
+          <p class="text-sm text-gray-500">London</p>
+          <h4 class="font-semibold mb-2 text-gray-800">Stonehenge, Windsor Castle and Bath with Pub</h4>
+          <div class="flex items-center justify-between text-xs text-gray-500 mb-2">
+            <span>⭐ 4.8 | 15 reviews</span>
+            <span>🕓 Full Day</span>
+          </div>
+          <p class="text-sm text-gray-600">Starting From <span class="font-bold text-gray-800">$520</span></p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white border rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Big_Ben_Clock_Tower.jpg" alt="" class="w-full h-44 object-cover">
+        <div class="p-4">
+          <p class="text-sm text-gray-500">Vatican Pirate</p>
+          <h4 class="font-semibold mb-2 text-gray-800">Edinburgh Darkside Walking Tour</h4>
+          <div class="flex items-center justify-between text-xs text-gray-500 mb-2">
+            <span>⭐ 4.8 | 15 reviews</span>
+            <span>🕒 20 hours</span>
+          </div>
+          <p class="text-sm text-gray-600">Starting From <span class="font-bold text-gray-800">$520</span></p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white border rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Thames_RIB_Experience_boat.jpg" alt="" class="w-full h-44 object-cover">
+        <div class="p-4">
+          <p class="text-sm text-gray-500">New York</p>
+          <h4 class="font-semibold mb-2 text-gray-800">High Speed Thames River RIB Cruise in London</h4>
+          <div class="flex items-center justify-between text-xs text-gray-500 mb-2">
+            <span>⭐ 4.8 | 15 reviews</span>
+            <span>🗓️ 2 days</span>
+          </div>
+          <p class="text-sm text-gray-600">Starting From <span class="font-bold text-gray-800">$520</span></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- Activities in UK Section -->
+  <section class="max-w-7xl mx-auto px-4 py-12">
+    <div class="flex justify-between items-center mb-6">
+      <h3 class="text-2xl font-bold">Activities in UK</h3>
+      <a href="#" class="text-sm text-primary font-medium hover:underline">See All →</a>
+    </div>
+
+    <!-- Activity Cards Grid -->
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+
+      <!-- Activity Card 1 -->
+      <div class="bg-white border rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Tower_Bridge_London_Feb_2006.jpg" alt="Tower Bridge" class="w-full h-44 object-cover">
+        <div class="p-4">
+          <p class="text-sm text-gray-500">London</p>
+          <h4 class="font-semibold mb-2 text-gray-800">London Eye Ticket with Fast Track Entry</h4>
+          <div class="flex items-center justify-between text-xs text-gray-500 mb-2">
+            <span>⭐ 4.9 | 20 reviews</span>
+            <span>🎟️ Entry Pass</span>
+          </div>
+          <p class="text-sm text-gray-600">Starting From <span class="font-bold text-gray-800">$180</span></p>
+        </div>
+      </div>
+
+      <!-- Activity Card 2 -->
+      <div class="bg-white border rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/St_Pauls_Cathedral_London.jpg" alt="St Paul's Cathedral" class="w-full h-44 object-cover">
+        <div class="p-4">
+          <p class="text-sm text-gray-500">London</p>
+          <h4 class="font-semibold mb-2 text-gray-800">St. Paul's Cathedral Entry Ticket with Audio Guide</h4>
+          <div class="flex items-center justify-between text-xs text-gray-500 mb-2">
+            <span>⭐ 4.7 | 12 reviews</span>
+            <span>🎧 Self Guide</span>
+          </div>
+          <p class="text-sm text-gray-600">Starting From <span class="font-bold text-gray-800">$220</span></p>
+        </div>
+      </div>
+
+      <!-- Activity Card 3 -->
+      <div class="bg-white border rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Buckingham_Palace_from_gardens%2C_London%2C_UK_-_Diliff.jpg" alt="Buckingham Palace" class="w-full h-44 object-cover">
+        <div class="p-4">
+          <p class="text-sm text-gray-500">London</p>
+          <h4 class="font-semibold mb-2 text-gray-800">Buckingham Palace Tour and Changing of the Guard</h4>
+          <div class="flex items-center justify-between text-xs text-gray-500 mb-2">
+            <span>⭐ 4.8 | 18 reviews</span>
+            <span>👮 Guided Tour</span>
+          </div>
+          <p class="text-sm text-gray-600">Starting From <span class="font-bold text-gray-800">$350</span></p>
+        </div>
+      </div>
+
+      <!-- Activity Card 4 -->
+      <div class="bg-white border rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Thames_River_Cruise_London_2018.jpg" alt="Thames River Cruise" class="w-full h-44 object-cover">
+        <div class="p-4">
+          <p class="text-sm text-gray-500">London</p>
+          <h4 class="font-semibold mb-2 text-gray-800">Thames River Dinner Cruise with Live Music</h4>
+          <div class="flex items-center justify-between text-xs text-gray-500 mb-2">
+            <span>⭐ 4.9 | 25 reviews</span>
+            <span>🎶 Live Event</span>
+          </div>
+          <p class="text-sm text-gray-600">Starting From <span class="font-bold text-gray-800">$400</span></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+    <!-- Footer Section -->
+  <footer class="bg-black text-gray-300 pt-16 pb-8 mt-12">
+    <div class="max-w-7xl mx-auto px-4 grid sm:grid-cols-2 md:grid-cols-4 gap-10">
+
+      <!-- Column 1: Logo + About -->
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-3">Trisog</h2>
+        <p class="text-sm mb-5">
+          Trisog is a modern travel and tour agency that connects you with the best destinations around the world. Explore, discover, and enjoy — your journey starts with us.
+        </p>
+        <div class="flex space-x-3">
+          <a href="#" class="hover:text-primary">Facebook</a>
+          <a href="#" class="hover:text-primary">Twitter</a>
+          <a href="#" class="hover:text-primary">LinkedIn</a>
+        </div>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div>
+        <h3 class="text-white font-semibold mb-3">Quick Links</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-primary">Home</a></li>
+          <li><a href="#" class="hover:text-primary">About</a></li>
+          <li><a href="#" class="hover:text-primary">Tours</a></li>
+          <li><a href="#" class="hover:text-primary">Destination</a></li>
+          <li><a href="#" class="hover:text-primary">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Support -->
+      <div>
+        <h3 class="text-white font-semibold mb-3">Support</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-primary">FAQs</a></li>
+          <li><a href="#" class="hover:text-primary">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-primary">Terms & Conditions</a></li>
+          <li><a href="#" class="hover:text-primary">Support Center</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Newsletter -->
+      <div>
+        <h3 class="text-white font-semibold mb-3">Subscribe</h3>
+        <p class="text-sm mb-3">Get updates on new tours, deals, and travel inspiration straight to your inbox.</p>
+        <form class="flex">
+          <input type="email" placeholder="Enter your email" class="w-full px-3 py-2 text-sm rounded-l-lg focus:outline-none text-gray-800">
+          <button class="bg-primary text-white px-4 rounded-r-lg text-sm font-medium hover:bg-orange-500 transition">Send</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+      © 2025 Trisog. All rights reserved. |
+    </div>
+  </footer>
+
+
+</body>
+</html>
