@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour — Trisog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/2ce14ed893.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .rating-badge {
+        background: #f97373;
+      }
+      .map-container {
+        position: relative;
+        padding-bottom: 56%;
+        height: 0;
+        overflow: hidden;
+      }
+      .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- Top contact strip -->
+    <div class="bg-gray-100 text-sm text-gray-600 sticky top-0 z-50">
+      <div
+        class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center"
+      >
+        <div>(000) 999-898-999 &nbsp; | &nbsp; info@trisog.com</div>
+        <div class="flex items-center space-x-3">
+          <div class="hidden sm:flex items-center space-x-4 text-xs">
+            <a href="#" class="hover:underline">Twitter</a>
+            <a href="#" class="hover:underline">LinkedIn</a>
+            <a href="#" class="hover:underline">GBP</a>
+          </div>
+          <div class="text-xs">EUR <span class="ml-1">▾</span></div>
+        </div>
+      </div>
+    </div>
+
+    <header class="bg-white border-b border-gray-200 sticky top-8 z-40">
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-6">
+          <img
+            src="/images/Slice_5-removebg-preview.png"
+            alt="Trisog"
+            class="h-10"
+          />
+          <nav class="hidden lg:flex gap-6 text-sm">
+            <a class="hover:text-red-500" href="#">Home</a>
+            <a class="hover:text-red-500" href="#">Tours</a>
+            <a class="hover:text-red-500" href="#">Destination</a>
+            <a class="hover:text-red-500" href="#">Blog</a>
+            <a class="hover:text-red-500" href="#">About</a>
+            <a class="hover:text-red-500" href="#">Contact</a>
+          </nav>
+        </div>
+
+        <div class="flex items-center gap-4 text-sm">
+          <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
+          <i class="fa-regular fa-user cursor-pointer"></i>
+          <a href="#" class="hover:text-red-500">LogIn</a><span>/</span>
+          <a href="#" class="hover:text-red-500">SignUp</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-10">
+      <!-- HERO + BOOKING ROW -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Left: Hero image & summary -->
+        <div class="lg:col-span-8 space-y-6">
+          <!-- Breadcrumb -->
+          <div class="text-sm text-gray-500">Home / Tours / Europe</div>
+
+          <!-- Hero Card -->
+          <div class="max-w-6xl mx-auto">
+            <div class="bg-white rounded-lg shadow overflow-hidden">
+              <div class="relative">
+                <img
+                  src="../images/pexels-photo-4254555.jpeg"
+                  alt="Budapest, Hungary - Wonders of the West Coast & Kimberley"
+                  class="w-full h-80 object-cover"
+                />
+
+                <div class="absolute bottom-4 right-4 flex space-x-2">
+                  <button
+                    class="bg-white text-gray-800 text-sm font-medium px-4 py-2 rounded-md shadow-md hover:bg-gray-100 transition"
+                  >
+                    <i class="fas fa-video mr-1"></i> Video
+                  </button>
+                  <button
+                    class="bg-white text-gray-800 text-sm font-medium px-4 py-2 rounded-md shadow-md hover:bg-gray-100 transition"
+                  >
+                    <i class="fas fa-images mr-1"></i> Gallery
+                  </button>
+                </div>
+              </div>
+
+              <div class="p-6 space-y-4">
+                <div class="flex justify-between items-center text-sm">
+                  <div class="flex items-center space-x-2">
+                    <i class="fas fa-map-marker-alt text-gray-500"></i>
+                    <span class="text-gray-700 font-medium"
+                      >Budapest, Hungary</span
+                    >
+                    <a
+                      href="#"
+                      class="text-red-500 hover:text-red-600 text-xs font-semibold border-b border-red-500"
+                      >View on map</a
+                    >
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <i
+                      class="fas fa-share-alt text-gray-500 cursor-pointer hover:text-red-500 transition"
+                    ></i>
+                    <i
+                      class="fas fa-heart text-gray-500 cursor-pointer hover:text-red-500 transition"
+                    ></i>
+                  </div>
+                </div>
+
+                <h1
+                  class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight"
+                >
+                  Wonders of the West Coast & Kimberley
+                </h1>
+
+                <div
+                  class="grid grid-cols-3 md:grid-cols-6 gap-x-4 pt-2 border-t border-gray-100"
+                >
+                  <div class="flex flex-col text-sm">
+                    <span class="text-gray-500">From</span>
+                    <span class="text-xl font-bold text-red-500">$104</span>
+                  </div>
+
+                  <div class="flex flex-col text-sm">
+                    <span class="text-gray-500">Duration</span>
+                    <span class="font-semibold text-gray-800">7 days</span>
+                  </div>
+
+                  <div class="flex flex-col text-sm">
+                    <span class="text-gray-500">Max People</span>
+                    <span class="font-semibold text-gray-800">25</span>
+                  </div>
+
+                  <div class="flex flex-col text-sm">
+                    <span class="text-gray-500">Min Age</span>
+                    <span class="font-semibold text-gray-800">12+</span>
+                  </div>
+
+                  <div class="flex flex-col text-sm">
+                    <span class="text-gray-500">Tour Type</span>
+                    <span class="font-semibold text-gray-800"
+                      >Adventure, Beaches</span
+                    >
+                  </div>
+
+                  <div class="flex flex-col text-sm">
+                    <span class="text-gray-500">Reviews</span>
+                    <div class="flex items-center space-x-1">
+                      <i class="fas fa-star text-red-500 text-sm"></i>
+                      <span class="font-semibold text-gray-800">4.8</span>
+                      <span class="text-gray-500">(15 reviews)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Overview -->
+          <section class="min-h-screen">
+            <div class="max-w-4xl mx-auto bg-white p-10 shadow-lg rounded-lg">
+              <div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Overview</h2>
+
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                  Istanbul, the vibrant and historic city straddling the
+                  continents of Europe and Asia, offers an enchanting blend of
+                  cultures, sights, and experiences that captivate every
+                  traveler's heart. As Turkey's cultural and economic hub,
+                  Istanbul seamlessly fuses its rich heritage with modernity,
+                  creating an unforgettable journey for visitors.
+                </p>
+
+                <p class="text-gray-600 leading-relaxed">
+                  The city is home to some of the world's most iconic landmarks,
+                  including the awe-inspiring **Hagia Sophia**, the majestic
+                  **Blue Mosque**, and the grand **Topkapi Palace**, each
+                  bearing witness to Istanbul's illustrious past. Wandering
+                  through the bustling streets, you'll find an array of
+                  delightful bazaars, where you can haggle for unique souvenirs,
+                  immerse yourself in the aromatic spices, and savor traditional
+                  Turkish delights.
+                </p>
+              </div>
+
+              <hr class="my-10 border-gray-200" />
+
+              <div class="mt-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                  Included / Exclude
+                </h2>
+
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-gray-700"
+                >
+                  <ul class="space-y-3">
+                    <li class="flex items-center">
+                      <i
+                        class="fa-solid fa-check text-red-500 text-lg mr-2"
+                      ></i>
+                      Pick and Drop Services
+                    </li>
+                    <li class="flex items-center">
+                      <i
+                        class="fa-solid fa-check text-red-500 text-lg mr-2"
+                      ></i>
+                      1 Meal Per Day
+                    </li>
+                    <li class="flex items-center">
+                      <i
+                        class="fa-solid fa-check text-red-500 text-lg mr-2"
+                      ></i>
+                      Cruise Dinner & Music Event
+                    </li>
+                    <li class="flex items-center">
+                      <i
+                        class="fa-solid fa-check text-red-500 text-lg mr-2"
+                      ></i>
+                      Visit 7 Best Places in the City With Group
+                    </li>
+                  </ul>
+
+                  <ul class="space-y-3">
+                    <li class="flex items-center">
+                      <i
+                        class="fa-solid fa-xmark text-red-500 text-lg mr-2"
+                      ></i>
+                      Additional Services
+                    </li>
+                    <li class="flex items-center">
+                      <i
+                        class="fa-solid fa-xmark text-red-500 text-lg mr-2"
+                      ></i>
+                      Insurance
+                    </li>
+                    <li class="flex items-center">
+                      <i
+                        class="fa-solid fa-xmark text-red-500 text-lg mr-2"
+                      ></i>
+                      Food & Drinks
+                    </li>
+                    <li class="flex items-center">
+                      <i
+                        class="fa-solid fa-xmark text-red-500 text-lg mr-2"
+                      ></i>
+                      Tickets
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-lg shadow">
+              <h2 class="text-2xl font-bold mb-6 text-gray-900">Tour Plan</h2>
+
+              <div class="space-y-4">
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                  <div
+                    class="flex justify-between items-center p-4 cursor-pointer hover:bg-gray-50 transition"
+                  >
+                    <span class="text-base font-semibold text-red-500"
+                      >Day 1: Welcome to Hungary</span
+                    >
+                    <i class="fas fa-chevron-down text-gray-500 text-sm"></i>
+                  </div>
+                </div>
+
+                <div
+                  class="border border-red-500 rounded-lg overflow-hidden shadow-md"
+                >
+                  <div
+                    class="flex justify-between items-center p-4 bg-red-500 cursor-pointer"
+                  >
+                    <span class="text-base font-semibold text-white"
+                      >Day 2: Arrive South Africa Forest</span
+                    >
+                    <i class="fas fa-chevron-up text-white text-sm"></i>
+                  </div>
+
+                  <div class="p-6 text-gray-700">
+                    <p class="mb-4 leading-relaxed">
+                      There are many variations of passages of available but
+                      majority have alteration in some by inject humour or
+                      random words. Lorem ipsum dolor sit amet, error insolens
+                      reprimique no quo, ea pri verterem phaedr vel ea iisque
+                      aliquam.
+                    </p>
+
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                      <li class="font-medium">Free Drinks</li>
+                      <li class="font-medium">Awesome Breakfast</li>
+                      <li class="font-medium">5 Star Accommodation</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div
+                  class="border border-gray-200 bg-gray-100 rounded-lg overflow-hidden"
+                >
+                  <div
+                    class="flex justify-between items-center p-4 cursor-pointer hover:bg-gray-50 transition"
+                  >
+                    <div>
+                      <span class="text-base font-semibold text-red-500"
+                        >Day 3:</span
+                      >
+                      <span class="text-base font-semibold">
+                        Arrive South Africa Forest</span
+                      >
+                    </div>
+                    <i class="fas fa-chevron-down text-gray-500 text-sm"></i>
+                  </div>
+                </div>
+
+                <div
+                  class="border border-gray-200 bg-gray-100 rounded-lg overflow-hidden"
+                >
+                  <div
+                    class="flex justify-between items-center p-4 cursor-pointer hover:bg-gray-50 transition"
+                  >
+                    <div>
+                      <span class="text-base font-semibold text-red-500"
+                        >Day 4:</span
+                      >
+                      <span class="text-base font-semibold">
+                        Arrive South Africa Forest</span
+                      >
+                    </div>
+                    <i class="fas fa-chevron-down text-gray-500 text-sm"></i>
+                  </div>
+                </div>
+
+                <div
+                  class="border border-gray-200 bg-gray-100 rounded-lg overflow-hidden"
+                >
+                  <div
+                    class="flex justify-between items-center p-4 cursor-pointer hover:bg-gray-50 transition"
+                  >
+                    <div>
+                      <span class="text-base font-semibold text-red-500"
+                        >Day 5:</span
+                      >
+                      <span class="text-base font-semibold">
+                        Arrive South Africa Forest</span
+                      >
+                    </div>
+                    <i class="fas fa-chevron-down text-gray-500 text-sm"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Calander -->
+          <section>
+            <div class="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-lg shadow">
+              <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-900">
+                  Calendar & Prices
+                </h2>
+                <div class="flex items-center space-x-4">
+                  <span class="text-lg font-semibold text-gray-700"
+                    >October 2023</span
+                  >
+                  <div class="flex space-x-2 text-xl text-gray-400">
+                    <button class="hover:text-gray-600 transition">
+                      <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="hover:text-gray-600 transition">
+                      <i class="fas fa-chevron-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="grid grid-cols-7 text-center border-t border-l border-gray-200"
+              >
+                <div
+                  class="py-3 text-sm font-semibold text-gray-500 border-b border-r border-gray-200"
+                >
+                  Monday
+                </div>
+                <div
+                  class="py-3 text-sm font-semibold text-gray-500 border-b border-r border-gray-200"
+                >
+                  Tuesday
+                </div>
+                <div
+                  class="py-3 text-sm font-semibold text-gray-500 border-b border-r border-gray-200"
+                >
+                  Wednesday
+                </div>
+                <div
+                  class="py-3 text-sm font-semibold text-gray-500 border-b border-r border-gray-200"
+                >
+                  Thursday
+                </div>
+                <div
+                  class="py-3 text-sm font-semibold text-gray-500 border-b border-r border-gray-200"
+                >
+                  Friday
+                </div>
+                <div
+                  class="py-3 text-sm font-semibold text-gray-500 border-b border-r border-gray-200"
+                >
+                  Saturday
+                </div>
+                <div
+                  class="py-3 text-sm font-semibold text-gray-500 border-b border-r border-gray-200"
+                >
+                  Sunday
+                </div>
+
+                <div
+                  class="p-2 border-b border-r border-gray-200 bg-gray-50 relative"
+                >
+                  <div class="text-lg font-bold text-gray-400">30</div>
+                  <div
+                    class="absolute inset-0 bg-repeat-3 bg-white opacity-60 pointer-events-none"
+                    style="
+                      background-image: repeating-linear-gradient(
+                        45deg,
+                        #f3f4f6,
+                        #f3f4f6 10px,
+                        transparent 10px,
+                        transparent 20px
+                      );
+                    "
+                  ></div>
+                </div>
+                <div
+                  class="p-2 border-b border-r border-gray-200 bg-gray-50 relative"
+                >
+                  <div class="text-lg font-bold text-gray-400">31</div>
+                  <div
+                    class="absolute inset-0 bg-repeat-3 bg-white opacity-60 pointer-events-none"
+                    style="
+                      background-image: repeating-linear-gradient(
+                        45deg,
+                        #f3f4f6,
+                        #f3f4f6 10px,
+                        transparent 10px,
+                        transparent 20px
+                      );
+                    "
+                  ></div>
+                </div>
+
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">1</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">2</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">3</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">4</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">5</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">6</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">7</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div
+                  class="p-2 border-b border-r border-red-500 bg-red-100 space-y-1 relative before:content-[''] before:absolute before:inset-0 before:border before:border-red-500 before:z-10 before:rounded-lg -m-px"
+                >
+                  <div class="text-lg font-bold text-red-600 z-20 relative">
+                    8
+                  </div>
+                  <div class="text-xs text-red-500 font-semibold z-20 relative">
+                    $120
+                  </div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">9</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">10</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">11</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">12</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">13</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">14</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">15</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">16</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">17</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">18</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">19</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">20</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">21</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">22</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">23</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">24</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">25</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">26</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">27</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">28</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">29</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+                <div class="p-2 border-b border-r border-gray-200 space-y-1">
+                  <div class="text-lg font-bold text-gray-900">30</div>
+                  <div class="text-xs text-red-500 font-semibold">$120</div>
+                </div>
+
+                <div
+                  class="p-2 border-b border-r border-gray-200 space-y-1 bg-gray-50"
+                >
+                  <div class="text-lg font-bold text-gray-400">1</div>
+                  <div class="text-xs text-red-300 font-semibold">$120</div>
+                </div>
+                <div
+                  class="p-2 border-b border-r border-gray-200 space-y-1 bg-gray-50"
+                >
+                  <div class="text-lg font-bold text-gray-400">2</div>
+                  <div class="text-xs text-red-300 font-semibold">$120</div>
+                </div>
+                <div
+                  class="p-2 border-b border-r border-gray-200 space-y-1 bg-gray-50"
+                >
+                  <div class="text-lg font-bold text-gray-400">3</div>
+                  <div class="text-xs text-red-300 font-semibold">$120</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Rating -->
+          <section>
+            <div
+              class="max-w-4xl mx-auto mt-10 p-6 bg-gray-100 rounded-lg shadow"
+            >
+              <h2 class="text-2xl font-bold mb-6 text-gray-900">
+                Average Reviews
+              </h2>
+
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                <div
+                  class="md:col-span-1 bg-red-500 text-white rounded-lg p-6 flex flex-col items-center justify-center shadow-lg"
+                >
+                  <div class="text-6xl font-extrabold">4.8</div>
+                  <div class="text-lg font-semibold mt-2">
+                    <i class="fas fa-star text-yellow-300 mr-1"></i> Excellent
+                  </div>
+                </div>
+
+                <div class="md:col-span-2 grid grid-cols-2 gap-x-8 gap-y-4">
+                  <div class="flex flex-col">
+                    <div
+                      class="flex justify-between text-sm text-gray-700 mb-1"
+                    >
+                      <span>Services</span>
+                      <span class="font-semibold">4.0</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-1.5">
+                      <div
+                        class="bg-red-500 h-1.5 rounded-full"
+                        style="width: 80%"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col">
+                    <div
+                      class="flex justify-between text-sm text-gray-700 mb-1"
+                    >
+                      <span>Prices</span>
+                      <span class="font-semibold">4.0</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-1.5">
+                      <div
+                        class="bg-red-500 h-1.5 rounded-full"
+                        style="width: 80%"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col">
+                    <div
+                      class="flex justify-between text-sm text-gray-700 mb-1"
+                    >
+                      <span>Locations</span>
+                      <span class="font-semibold">2.8</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-1.5">
+                      <div
+                        class="bg-red-500 h-1.5 rounded-full"
+                        style="width: 56%"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col">
+                    <div
+                      class="flex justify-between text-sm text-gray-700 mb-1"
+                    >
+                      <span>Food</span>
+                      <span class="font-semibold">3.5</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-1.5">
+                      <div
+                        class="bg-red-500 h-1.5 rounded-full"
+                        style="width: 70%"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col">
+                    <div
+                      class="flex justify-between text-sm text-gray-700 mb-1"
+                    >
+                      <span>Amenities</span>
+                      <span class="font-semibold">3.0</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-1.5">
+                      <div
+                        class="bg-red-500 h-1.5 rounded-full"
+                        style="width: 60%"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col">
+                    <div
+                      class="flex justify-between text-sm text-gray-700 mb-1"
+                    >
+                      <span>Room comfort and quality</span>
+                      <span class="font-semibold">4.6</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-1.5">
+                      <div
+                        class="bg-red-500 h-1.5 rounded-full"
+                        style="width: 92%"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- review -->
+          <section>
+            <h3 class="text-xl font-bold mb-4 text-gray-900">
+              Showing 1 review
+            </h3>
+
+            <div class="border border-gray-200 p-6">
+              <div class="flex items-start space-x-4">
+                <div class="shrink-0">
+                  <img
+                    class="h-16 w-16 rounded-full object-cover"
+                    src="../images/enza-53579-high-profile-poplin-cap_A6-1871-53579.gif"
+                    alt="Sindy Simmons"
+                  />
+                </div>
+
+                <div>
+                  <div class="flex items-center space-x-4 mb-1">
+                    <span class="text-sm text-gray-500">March 20, 2022</span>
+                  </div>
+                  <div class="text-lg font-bold text-gray-900 mb-1">
+                    Sindy Simmons
+                  </div>
+
+                  <div
+                    class="flex items-center space-x-2 text-sm text-gray-500 mb-3"
+                  >
+                    <span
+                      class="px-2 py-0.5 rounded bg-red-500 text-white text-xs font-semibold"
+                    >
+                      4.8
+                    </span>
+                    <span>15 reviews</span>
+                  </div>
+
+                  <p class="text-gray-700 italic leading-relaxed">
+                    Objectively productivate just in time information with
+                    dynamic channels. Energistically exploit seamless growth
+                    strategies after 24/7 experiences.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- MAP + DIRECTIONS -->
+          <div class="bg-white rounded-lg shadow p-6">
+            <h4 class="font-semibold mb-4">Location</h4>
+            <div class="map-container rounded overflow-hidden">
+              <iframe
+                src="https://maps.google.com/maps?q=The%20Hague&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="mt-4 text-sm text-gray-600">
+              <p>Address: The Hague, Netherlands</p>
+              <p>Meeting point will be provided after booking.</p>
+            </div>
+          </div>
+
+          <!-- Add a review -->
+          <section class="pb-12">
+            <div
+              class="bg-gray-100 p-8 rounded-md shadow-lg max-w-3xl mx-auto border border-gray-100"
+            >
+              <h2 class="text-2xl font-bold text-gray-900 mb-6">
+                Add a review
+              </h2>
+
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 text-sm">
+                <div>
+                  <h4 class="font-semibold text-gray-700 mb-2">Services</h4>
+                  <div
+                    class="flex space-x-0.5 text-xl text-gray-300 cursor-pointer"
+                  >
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-gray-700 mb-2">Locations</h4>
+                  <div
+                    class="flex space-x-0.5 text-xl text-gray-300 cursor-pointer"
+                  >
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-gray-700 mb-2">Amenities</h4>
+                  <div
+                    class="flex space-x-0.5 text-xl text-gray-300 cursor-pointer"
+                  >
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-gray-700 mb-2">Prices</h4>
+                  <div
+                    class="flex space-x-0.5 text-xl text-gray-300 cursor-pointer"
+                  >
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                  </div>
+                </div>
+
+                <div class="col-span-2 md:col-span-4 mt-2">
+                  <h4 class="font-semibold text-gray-700 mb-2">
+                    Room comfort and quality
+                  </h4>
+                  <div
+                    class="flex space-x-0.5 text-xl text-gray-300 cursor-pointer"
+                  >
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                    <i class="fas fa-star hover:text-yellow-400 transition"></i>
+                  </div>
+                </div>
+              </div>
+
+              <form>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label for="name" class="sr-only">Your name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder="Your name"
+                      class="w-full px-4 py-3 border border-gray-200 bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                    />
+                  </div>
+                  <div>
+                    <label for="email" class="sr-only">Email address</label>
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="Email address"
+                      class="w-full px-4 py-3 border border-gray-200 bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                    />
+                  </div>
+                </div>
+                <div class="mb-6">
+                  <label for="comment" class="sr-only"
+                    >Write your comment</label
+                  >
+                  <textarea
+                    id="comment"
+                    placeholder="Write your comment"
+                    rows="5"
+                    class="w-full px-4 py-3 border border-gray-200 bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
+                >
+                  Submit review
+                </button>
+              </form>
+            </div>
+          </section>
+        </div>
+
+        <!-- Booking Card -->
+        <div class="lg:col-span-4">
+          <div class="lg:sticky lg:top-28 space-y-6">
+            <div
+              class="bg-gray-100 rounded-lg shadow p-6 border border-gray-100"
+            >
+              <div class="mb-4">
+                <span class="text-3xl font-bold text-gray-900">$104</span>
+                <span class="text-base text-gray-500">/ per person</span>
+              </div>
+
+              <form class="space-y-6">
+                <div>
+                  <label
+                    for="date"
+                    class="block text-sm font-semibold text-gray-900 mb-1"
+                    >Date</label
+                  >
+                  <div class="relative">
+                    <input
+                      type="text"
+                      id="date"
+                      placeholder="Choose date"
+                      class="w-full border border-gray-300 rounded-md px-4 py-2 pr-10 text-gray-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    />
+                    <i
+                      class="fas fa-calendar-alt absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"
+                    ></i>
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    for="time"
+                    class="block text-sm font-semibold text-gray-900 mb-1"
+                    >Time</label
+                  >
+                  <div class="relative">
+                    <select
+                      id="time"
+                      class="w-full border border-gray-300 rounded-md px-4 py-2 appearance-none text-gray-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    >
+                      <option value="">Select</option>
+                      <option value="9am">9:00 AM</option>
+                      <option value="11am">11:00 AM</option>
+                      <option value="2pm">2:00 PM</option>
+                    </select>
+                    <i
+                      class="fas fa-chevron-down absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none text-xs"
+                    ></i>
+                  </div>
+                </div>
+
+                <div class="space-y-4">
+                  <label class="block text-sm font-semibold text-gray-900"
+                    >Ticket</label
+                  >
+
+                  <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                      <span class="text-gray-700">Adults (18+ years)</span>
+                      <div class="flex items-center space-x-2">
+                        <button
+                          type="button"
+                          class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded text-xl text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-red-500"
+                        >
+                          &minus;
+                        </button>
+                        <input
+                          type="number"
+                          value="0"
+                          min="0"
+                          class="w-8 text-center border border-gray-300 text-lg font-semibold bg-gray-100 rounded text-gray-600"
+                          readonly
+                        />
+                        <button
+                          type="button"
+                          class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded text-xl text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-red-500"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                      <span class="text-gray-700">Kids (12+ years)</span>
+                      <div class="flex items-center space-x-2">
+                        <button
+                          type="button"
+                          class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded text-xl text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-red-500"
+                        >
+                          &minus;
+                        </button>
+                        <input
+                          type="number"
+                          value="0"
+                          min="0"
+                          class="w-8 text-center border border-gray-300 text-lg font-semibold bg-gray-100 rounded text-gray-600"
+                          readonly
+                        />
+                        <button
+                          type="button"
+                          class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded text-xl text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-red-500"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                      <span class="text-gray-700">Children (3+ years)</span>
+                      <div class="flex items-center space-x-2">
+                        <button
+                          type="button"
+                          class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded text-xl text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-red-500"
+                        >
+                          &minus;
+                        </button>
+                        <input
+                          type="number"
+                          value="0"
+                          min="0"
+                          class="w-8 text-center border border-gray-300 text-lg font-semibold bg-gray-100 rounded text-gray-600"
+                          readonly
+                        />
+                        <button
+                          type="button"
+                          class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded text-xl text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-red-500"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="flex items-center justify-between pt-4 border-t border-gray-200"
+                >
+                  <span class="text-lg font-bold text-gray-900">Total</span>
+                  <span class="text-2xl font-bold text-red-500">$104</span>
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-3 rounded-md transition focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
+                >
+                  Book now
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- You may also like -->
+      <section class="mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h3 class="text-3xl font-bold text-gray-800 mb-10 text-center">
+          You may also like...
+        </h3>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        >
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg"
+          >
+            <div class="relative">
+              <img
+                src="/images/tour-1.png"
+                class="w-full h-56 object-cover"
+                alt="Wonders of the West Coast & Kimberley"
+              />
+              <button
+                class="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md text-gray-500 hover:text-red-500 transition"
+              >
+                &#x2661;
+              </button>
+            </div>
+
+            <div class="p-4">
+              <div class="text-sm text-gray-500 mb-1">Budapest, Hungary</div>
+
+              <h4 class="text-lg font-bold text-gray-800 mb-2">
+                Wonders of the West Coast & Kimberley
+              </h4>
+
+              <div
+                class="flex items-center space-x-4 text-sm text-gray-600 mb-3"
+              >
+                <div class="flex items-center space-x-1">
+                  <span
+                    class="inline-flex items-center bg-red-500 rounded-lg px-2 py-1 text-sm font-bold text-white shadow-md"
+                  >
+                    <i class="fa-solid fa-star text-xs mr-1"></i>
+                    4.8
+                  </span>
+                </div>
+                <div class="flex items-center space-x-1">
+                  <i class="fa-solid fa-clock text-gray-500 text-xs"></i>
+                  <span class="text-gray-500">7days</span>
+                </div>
+              </div>
+
+              <div
+                class="flex items-baseline justify-between pt-2 border-t border-gray-100"
+              >
+                <div class="text-gray-500 text-sm">Starting from</div>
+                <div class="font-bold text-xl text-gray-800">$520</div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg"
+          >
+            <div class="relative">
+              <img
+                src="/images/images (1).jpg"
+                class="w-full h-56 object-cover"
+                alt="Windsor Castle, and Bath from London"
+              />
+              <button
+                class="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md text-gray-500 hover:text-red-500 transition"
+              >
+                &#x2661;
+              </button>
+            </div>
+            <div class="p-4">
+              <div class="text-sm text-gray-500 mb-1">Greater London, UK</div>
+              <h4 class="text-lg font-bold text-gray-800 mb-2">
+                Windsor Castle, and Bath from London
+              </h4>
+              <div
+                class="flex items-center space-x-4 text-sm text-gray-600 mb-3"
+              >
+                <div class="flex items-center space-x-1">
+                  <span
+                    class="inline-flex items-center bg-red-500 rounded-lg px-2 py-1 text-sm font-bold text-white shadow-md"
+                  >
+                    <i class="fa-solid fa-star text-xs mr-1"></i>
+                    4.8
+                  </span>
+                </div>
+                <div class="flex items-center space-x-1">
+                  <i class="fa-solid fa-clock text-gray-500 text-xs"></i>
+                  <span class="text-gray-500">7days</span>
+                </div>
+              </div>
+              <div
+                class="flex items-baseline justify-between pt-2 border-t border-gray-100"
+              >
+                <div class="text-gray-500 text-sm">Starting from</div>
+                <div class="font-bold text-xl text-gray-800">$520</div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg"
+          >
+            <div class="relative">
+              <img
+                src="/images/1c67eeb6284d7bafb12b8767901bf3e7.jpg"
+                class="w-full h-56 object-cover"
+                alt="Enchanting Great Barrier Reef, Aquatic Wonderland"
+              />
+              <button
+                class="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md text-gray-500 hover:text-red-500 transition"
+              >
+                &#x2661;
+              </button>
+            </div>
+            <div class="p-4">
+              <div class="text-sm text-gray-500 mb-1">Australia</div>
+              <h4 class="text-lg font-bold text-gray-800 mb-2">
+                Enchanting Great Barrier Reef, Aquatic Wonderland
+              </h4>
+              <div
+                class="flex items-center space-x-4 text-sm text-gray-600 mb-3"
+              >
+                <div class="flex items-center space-x-1">
+                  <span
+                    class="inline-flex items-center bg-red-500 rounded-lg px-2 py-1 text-sm font-bold text-white shadow-md"
+                  >
+                    <i class="fa-solid fa-star text-xs mr-1"></i>
+                    4.8
+                  </span>
+                </div>
+                <div class="flex items-center space-x-1">
+                  <i class="fa-solid fa-clock text-gray-500 text-xs"></i>
+                  <span class="text-gray-500">7days</span>
+                </div>
+              </div>
+              <div
+                class="flex items-baseline justify-between pt-2 border-t border-gray-100"
+              >
+                <div class="text-gray-500 text-sm">Starting from</div>
+                <div class="font-bold text-xl text-gray-800">$520</div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg"
+          >
+            <div class="relative">
+              <img
+                src="/images//pexels-photo-14044466.webp"
+                class="w-full h-56 object-cover"
+                alt="Ancient Heritage and Desert Adventures"
+              />
+              <button
+                class="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md text-gray-500 hover:text-red-500 transition"
+              >
+                &#x2661;
+              </button>
+            </div>
+            <div class="p-4">
+              <div class="text-sm text-gray-500 mb-1">Oman</div>
+              <h4 class="text-lg font-bold text-gray-800 mb-2">
+                Ancient Heritage and Desert Adventures
+              </h4>
+              <div
+                class="flex items-center space-x-4 text-sm text-gray-600 mb-3"
+              >
+                <div class="flex items-center space-x-1">
+                  <span
+                    class="inline-flex items-center bg-red-500 rounded-lg px-2 py-1 text-sm font-bold text-white shadow-md"
+                  >
+                    <i class="fa-solid fa-star text-xs mr-1"></i>
+                    4.8
+                  </span>
+                </div>
+                <div class="flex items-center space-x-1">
+                  <i class="fa-solid fa-clock text-gray-500 text-xs"></i>
+                  <span class="text-gray-500">7days</span>
+                </div>
+              </div>
+              <div
+                class="flex items-baseline justify-between pt-2 border-t border-gray-100"
+              >
+                <div class="text-gray-500 text-sm">Starting from</div>
+                <div class="font-bold text-xl text-gray-800">$520</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center space-x-2 mt-8">
+          <span class="w-2 h-2 bg-red-500 rounded-full"></span>
+          <span class="w-2 h-2 bg-gray-300 rounded-full"></span>
+          <span class="w-2 h-2 bg-gray-300 rounded-full"></span>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0f0f0f] text-gray-300 mt-12">
+      <div class="max-w-7xl mx-auto px-6 py-12">
+        <div
+          class="flex flex-col md:flex-row md:items-start md:divide-x md:divide-gray-800"
+        >
+          <div class="md:w-1/4 md:pr-6 pb-8 md:pb-0">
+            <div class="flex items-center gap-3 mb-6">
+              <div
+                class="w-9 h-9 flex items-center justify-center rounded-full"
+                style="background-color: #f73b3b"
+              >
+                <img src="" alt="logo" />
+              </div>
+              <span class="text-white font-semibold text-lg">Trisog</span>
+            </div>
+
+            <p class="text-sm text-gray-400 italic mb-2">Need any help?</p>
+            <p class="text-white font-semibold mb-4">
+              Call Us: <span class="text-red-400">(888) 1234 5678</span>
+            </p>
+
+            <address class="not-italic text-sm text-gray-400 mb-4">
+              Love Street, Muscat, Oman<br />
+              example@trisog.com
+            </address>
+
+            <div class="flex gap-3">
+              <a
+                aria-label="facebook"
+                href="#"
+                class="p-2 bg-gray-800 rounded-sm hover:bg-gray-700"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                aria-label="twitter"
+                href="#"
+                class="p-2 bg-gray-800 rounded-sm hover:bg-gray-700"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                aria-label="linkedin"
+                href="#"
+                class="p-2 bg-gray-800 rounded-sm hover:bg-gray-700"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="md:w-2/4 md:px-6 pb-8 md:pb-0">
+            <div class="grid grid-cols-3 gap-6">
+              <div>
+                <h4 class="text-sm text-gray-300 font-medium mb-4">Company</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                  <li><a href="#" class="hover:text-white">About Us</a></li>
+                  <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                  <li>
+                    <a href="#" class="hover:text-white">Travel Guides</a>
+                  </li>
+                  <li><a href="#" class="hover:text-white">Data Policy</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="text-sm text-gray-300 font-medium mb-4">
+                  Top Destination
+                </h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                  <li><a href="#" class="hover:text-white">Las Vegas</a></li>
+                  <li>
+                    <a href="#" class="hover:text-white">New York City</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white">San Francisco</a>
+                  </li>
+                  <li><a href="#" class="hover:text-white">Hawaii</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="text-sm text-gray-300 font-medium mb-4">
+                  Top Destination
+                </h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                  <li><a href="#" class="hover:text-white">Tokyo</a></li>
+                  <li><a href="#" class="hover:text-white">Sydney</a></li>
+                  <li><a href="#" class="hover:text-white">Melbourne</a></li>
+                  <li><a href="#" class="hover:text-white">Dubai</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:w-1/4 md:pl-6">
+            <h4 class="text-sm text-gray-100 font-medium mb-4">
+              Sign up Newsletter
+            </h4>
+            <form class="block items-center">
+              <label for="email" class="sr-only">Email</label>
+              <input
+                id="email"
+                type="email"
+                placeholder="Enter email..."
+                required
+                class="w-full px-3 py-2 rounded-md bg-gray-200 border border-gray-700 text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-400"
+              />
+              <button
+                type="submit"
+                class="px-4 py-2 mt-4 rounded-md bg-red-500 text-white font-semibold hover:opacity-95"
+              >
+                Submit
+              </button>
+            </form>
+            <p class="text-xs text-gray-500 mt-6">
+              &copy; 2025 Trisog — All Rights Reserved
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
