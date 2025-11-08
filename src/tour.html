@@ -39,11 +39,12 @@
         background-position: center;
       }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
 
   <body class="bg-white font-body">
     <!-- Top contact strip -->
-    <div class="text-sm text-gray-600 bg-gray-100 sticky top-0 align-top z-50">
+    <div class="bg-gray-100 text-sm text-gray-600 sticky top-0 align-top z-50">
       <div
         class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center"
       >
@@ -58,6 +59,7 @@
         </div>
       </div>
     </div>
+
     <header
       class="bg-white text-base text-blue-950 border-b border-gray-300 w-full h-20 z-50 sticky top-9 align-top"
     >
@@ -65,9 +67,7 @@
         <img src="/images/Slice_5-removebg-preview.png" class="logo" />
         <ul class="flex gap-5 mr-64 -ml-32">
           <li>
-            <a class="cursor-pointer hover:text-red-400" href="index.html"
-              >Home</a
-            >
+            <a class="cursor-pointer hover:text-red-400" href="index.html">Home</a>
           </li>
           <li>
             <a class="cursor-pointer hover:text-red-400" href="tour.html"
@@ -89,7 +89,6 @@
               >About</a
             >
           </li>
-
           <li>
             <a class="cursor-pointer hover:text-red-400" href="contact.html"
               >Contact</a
@@ -100,13 +99,32 @@
           <li>
             <i class="fa-solid fa-magnifying-glass flex cursor-pointer"></i>
           </li>
-          <li><i class="fa-regular fa-user cursor-pointer"></i></li>
-          <li>
-            <a class="cursor-pointer hover:text-red-400" href="">LogIn</a>
+          <li id="user-icon">
+            <i class="fa-regular fa-user cursor-pointer"></i>
           </li>
-          <span class="cursor-pointer hover:text-red-400">/</span>
-          <li>
-            <a class="cursor-pointer hover:text-red-400" href="">SignUp</a>
+
+          <li id="login-link-li">
+            <a
+              class="cursor-pointer hover:text-red-400"
+              href="#"
+              id="open-login-modal-nav"
+              >LogIn</a
+            >
+          </li>
+          <span id="auth-separator" class="cursor-pointer hover:text-red-400"
+            >/</span
+          >
+          <li id="signup-link-li">
+            <a class="cursor-pointer hover:text-red-400" href="#">SignUp</a>
+          </li>
+
+          <li id="logout-link-li" class="hidden">
+            <a
+              class="cursor-pointer hover:text-red-400"
+              href="#"
+              id="logout-btn"
+              >Log-Out</a
+            >
           </li>
         </ul>
       </nav>
@@ -928,5 +946,89 @@
         </div>
       </div>
     </footer>
+
+    <!-- Sign-In overlay -->
+    <div
+      class="fixed inset-0 backdrop-blur bg-opacity-50 flex items-center justify-center transition-opacity duration-300 opacity-0 pointer-events-none z-50"
+      id="login-modal"
+    >
+      <div
+        class="bg-white p-8 rounded-lg shadow-2xl relative w-full max-w-md transform transition-all duration-300 scale-95"
+      >
+        <button
+          class="close-btn absolute top-3 right-3 text-gray-500 hover:text-gray-900 transition-colors"
+          id="close-modal-btn"
+        >
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+
+        <h1
+          id="sign-in-title"
+          class="text-3xl font-bold mb-6 text-center text-gray-800"
+        >
+          Sign In
+        </h1>
+
+        <form action="/login" method="POST" id="login-form">
+          <!-- EMAIL FIELD -->
+          <div class="input_control mb-4 email-control">
+            <label for="email" class="hidden">Email</label>
+            <div
+              class="flex items-center border border-gray-300 rounded-md focus-within:ring-2 focus-within:ring-blue-500"
+            >
+              <i class="fa-solid fa-envelope text-gray-400 px-3"></i>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+                class="w-full py-2 px-3 border-none focus:outline-none rounded-r-md"
+              />
+            </div>
+            <div class="error-message text-sm text-red-500 mt-1 h-4"></div>
+          </div>
+
+          <!-- PASSWORD FIELD -->
+          <div class="input_control password_field mb-6 password-control">
+            <label for="password" class="hidden">Password</label>
+            <div
+              class="flex items-center border border-gray-300 rounded-md focus-within:ring-2 focus-within:ring-blue-500"
+            >
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                required
+                class="w-full py-2 px-3 border-none focus:outline-none rounded-l-md"
+              />
+              <i
+                class="fa-regular fa-eye text-gray-400 pr-8 cursor-pointer hover:text-gray-600 transition-colors"
+                id="togglePassword"
+              ></i>
+            </div>
+            <div class="error-message text-sm text-red-500 mt-1 h-4"></div>
+          </div>
+
+          <p id="forgot-password" class="text-sm text-gray-600 mb-6">
+            Lost your password?
+            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium"
+              >Click here</a
+            >
+          </p>
+
+          <button
+            class="w-full py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            type="submit"
+            id="sign-in-btn"
+          >
+            Sign In
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
