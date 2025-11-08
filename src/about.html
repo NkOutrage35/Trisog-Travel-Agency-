@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us Section</title>
+    <title>About - Trisog</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script
       src="https://kit.fontawesome.com/2ce14ed893.js"
@@ -17,6 +17,7 @@
       }
     </style>
   </head>
+
   <body class="bg-white">
     <!-- Top contact strip -->
     <div class="bg-gray-100 text-sm text-gray-600 sticky top-0 align-top z-50">
@@ -34,29 +35,35 @@
         </div>
       </div>
     </div>
+
     <header
       class="bg-white text-base text-blue-950 border-b border-gray-300 w-full h-20 z-50 sticky top-9 align-top"
     >
       <nav class="navbar p-3 flex items-center justify-between max-[90%] mx-12">
         <img src="/images/Slice_5-removebg-preview.png" class="logo" />
         <ul class="flex gap-5 mr-64 -ml-32">
-          <li><a class="cursor-pointer hover:text-red-400" href="">Home</a></li>
           <li>
-            <a class="cursor-pointer hover:text-red-400" href="">Tours</a>
+            <a class="cursor-pointer hover:text-red-400" href="#">Home</a>
           </li>
           <li>
-            <a class="cursor-pointer hover:text-red-400" href="destination.html"
+            <a class="cursor-pointer hover:text-red-400" href="tour.html"
+              >Tours</a
+            >
+          </li>
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="Destination"
               >Destination</a
             >
           </li>
-          <li><a class="cursor-pointer hover:text-red-400" href="">Blog</a></li>
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="Blog.html"
+              >Blog</a
+            >
+          </li>
           <li>
             <a class="cursor-pointer hover:text-red-400" href="about.html"
               >About</a
             >
-          </li>
-          <li>
-            <a class="cursor-pointer hover:text-red-400" href="">Pages</a>
           </li>
           <li>
             <a class="cursor-pointer hover:text-red-400" href="contact.html"
@@ -68,13 +75,33 @@
           <li>
             <i class="fa-solid fa-magnifying-glass flex cursor-pointer"></i>
           </li>
-          <li><i class="fa-regular fa-user cursor-pointer"></i></li>
-          <li>
-            <a class="cursor-pointer hover:text-red-400" href="">LogIn</a>
+          <li id="user-icon">
+            <i class="fa-regular fa-user cursor-pointer"></i>
           </li>
-          <span class="cursor-pointer hover:text-red-400">/</span>
-          <li>
-            <a class="cursor-pointer hover:text-red-400" href="">SignUp</a>
+
+          <li id="login-link-li">
+            <a
+              class="cursor-pointer hover:text-red-400"
+              href="#"
+              id="open-login-modal-nav"
+              >LogIn</a
+            >
+          </li>
+          <span id="auth-separator" class="cursor-pointer hover:text-red-400"
+            >/</span
+          >
+          <li id="signup-link-li">
+            <a class="cursor-pointer hover:text-red-400" href="#">SignUp</a>
+          </li>
+
+          
+          <li id="logout-link-li" class="hidden">
+            <a
+              class="cursor-pointer hover:text-red-400"
+              href="#"
+              id="logout-btn"
+              >Log-Out</a
+            >
           </li>
         </ul>
       </nav>
@@ -83,7 +110,7 @@
     <section
       class="header-bg relative h-64 flex items-center justify-center text-white"
     >
-      <div class="absolute inset-0 bg-blue-900 opacity-60"></div>
+      <div class="absolute inset-0 bg-blue-950 opacity-50"></div>
 
       <div class="relative z-10 text-center">
         <h1 class="text-5xl font-bold mb-2">About</h1>
@@ -133,7 +160,7 @@
 
         <div class="space-y-6 w-[31rem]">
           <p class="text-red-500 font-serif italic text-xl">About us</p>
-          <h2 class="text-5xl font-extrabold text-gray-900 leading-tight">
+          <h2 class="text-5xl font-extrabold text-blue-950 leading-tight">
             Why Select Us for <br class="hidden sm:block" />
             Your Vaction
           </h2>
@@ -157,7 +184,7 @@
             high-impact infrastructures.
             <img
               src="../images/pngtree-palm-tree.png"
-              class="w-24 pt-4 opacity-[0.3] relative -right-[32rem] bottom-[4rem] -mb-16"
+              class="w-24 pt-4 opacity-[0.3] relative -right-[32rem] bottom-16 -mb-16"
             />
           </p>
         </div>
@@ -196,6 +223,333 @@
       </div>
     </section>
 
+    <section class="py-16 md:py-24 bg-gray-100 relative overflow-hidden">
+      <img
+        src="../images/planes.svg"
+        alt="Planes flying"
+        class="absolute top-17 right-20 w-40 opacity-100 hidden lg:block"
+      />
+
+      <div
+        class="absolute top-1/4 left-0 w-40 h-full border-l-2 border-dashed border-gray-100 hidden lg:block"
+      ></div>
+      <div
+        class="absolute bottom-1/4 right-0 w-40 h-full border-r-2 border-dashed border-gray-100 opacity-50 hidden lg:block"
+      ></div>
+
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 md:mb-16">
+          <p
+            class="text-red-500 text-lg font-semibold font-serif italic tracking-widest uppercase relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:w-10 after:bg-red-500/50 mb-2 inline-block"
+          >
+            Features
+          </p>
+          <h2
+            class="text-4xl md:text-5xl font-extrabold text-blue-950 leading-tight"
+          >
+            Why Choose Us
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-6 shadow-md hover:shadow-xl transition duration-300"
+          >
+            <div class="flex flex-col items-start space-y-3">
+              <i
+                class="fa-regular fa-money-bill-1 text-xl w-10 h-10 object-cover rounded-full border-2 border-red-500 p-1"
+              ></i>
+
+              <h3 class="text-xl font-bold text-gray-900 mt-2">Cheap Rates</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Credibly target visionary portals rather than prospectively
+                human capital.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white p-6 shadow-md hover:shadow-xl transition duration-300"
+          >
+            <div class="flex flex-col items-start space-y-3">
+              <i
+                class="fa-solid fa-ticket text-xl w-10 h-10 object-cover rounded-full border-2 border-red-500 p-1"
+              ></i>
+
+              <h3 class="text-xl font-bold text-gray-900 mt-2">
+                Best Travel Plan
+              </h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Credibly target visionary portals rather than prospectively
+                human capital.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white p-6 shadow-md hover:shadow-xl transition duration-300"
+          >
+            <div class="flex flex-col items-start space-y-3">
+              <i
+                class="fa-solid fa-book-open text-xl w-10 h-10 object-cover rounded-full border-2 border-red-500 p-1"
+              ></i>
+
+              <h3 class="text-xl font-bold text-gray-900 mt-2">
+                Easy & Quick Booking
+              </h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Credibly target visionary portals rather than prospectively
+                human capital.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white p-6 shadow-md hover:shadow-xl transition duration-300"
+          >
+            <div class="flex flex-col items-start space-y-3">
+              <i
+                class="fa-regular fa-hand-peace text-xl w-10 h-10 object-cover rounded-full border-2 border-red-500 p-1"
+              ></i>
+
+              <h3 class="text-xl font-bold text-gray-900 mt-2">
+                Hand-picked Tour
+              </h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Credibly target visionary portals rather than prospectively
+                human capital.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white p-6 shadow-md hover:shadow-xl transition duration-300"
+          >
+            <div class="flex flex-col items-start space-y-3">
+              <i
+                class="fa-solid fa-user-secret text-xl w-10 h-10 object-cover rounded-full border-2 border-red-500 p-1"
+              ></i>
+
+              <h3 class="text-xl font-bold text-gray-900 mt-2">
+                Private Guide
+              </h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Credibly target visionary portals rather than prospectively
+                human capital.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white p-6 shadow-md hover:shadow-xl transition duration-300"
+          >
+            <div class="flex flex-col items-start space-y-3">
+              <i
+                class="fa-solid fa-clock-rotate-left text-xl w-10 h-10 object-cover rounded-full border-2 border-red-500 p-1"
+              ></i>
+
+              <h3 class="text-xl font-bold text-gray-900 mt-2">
+                Customer Care 24/7
+              </h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Credibly target visionary portals rather than prospectively
+                human capital.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16 md:py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex flex-col items-center justify-center mb-10 md:mb-12 text-center"
+        >
+          <p
+            class="text-red-500 text-lg tracking-wider"
+            style="font-family: 'Times New Roman', Times, serif"
+          >
+            Team
+          </p>
+          <h2
+            class="text-3xl md:text-4xl font-extrabold text-blue-950 leading-tight"
+          >
+            Our Amazing Team
+          </h2>
+        </div>
+
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8 justify-center"
+        >
+          <div
+            class="p-0 m-0 overflow-hidden transition duration-300 ease-in-out break-inside-avoid text-center"
+          >
+            <div class="w-full aspect-4/5 overflow-hidden">
+              <img
+                src="../images/p1.jpg"
+                alt="Antoni Shkraba"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-4 mt-2">
+              <h3 class="text-xl font-bold text-gray-900 mb-0">
+                Antoni Shkraba
+              </h3>
+              <p class="text-sm text-gray-600">Founder & Director</p>
+            </div>
+          </div>
+
+          <div
+            class="p-0 m-0 overflow-hidden transition duration-300 ease-in-out break-inside-avoid text-center"
+          >
+            <div class="w-full aspect-4/5 overflow-hidden">
+              <img
+                src="../images/p2.jpg"
+                alt="Andrew Davie"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-4 mt-2">
+              <h3 class="text-xl font-bold text-gray-900 mb-0">Andrew Davie</h3>
+              <p class="text-sm text-gray-600">Chief Operating Officer</p>
+            </div>
+          </div>
+
+          <div
+            class="p-0 m-0 overflow-hidden transition duration-300 ease-in-out break-inside-avoid text-center"
+          >
+            <div class="w-full aspect-4/5 overflow-hidden">
+              <img
+                src="../images/p3.jpg"
+                alt="Orlando Diggs"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-4 mt-2">
+              <h3 class="text-xl font-bold text-gray-900 mb-0">
+                Orlando Diggs
+              </h3>
+              <p class="text-sm text-gray-600">Director - Hotels</p>
+            </div>
+          </div>
+
+          <div
+            class="p-0 m-0 overflow-hidden transition duration-300 ease-in-out break-inside-avoid text-center relative"
+          >
+            <div class="w-full aspect-4/5 overflow-hidden">
+              <img
+                src="../images/resize.webp"
+                alt="Philip Martin"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-black/30 flex items-center justify-center space-x-2 opacity-0 hover:opacity-100 transition duration-300"
+              >
+                <a href="#" class="text-white hover:text-red-400"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="text-white hover:text-red-400"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="text-white hover:text-red-400"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="p-4 mt-2">
+              <h3 class="text-xl font-bold text-gray-900 mb-0">
+                Philip Martin
+              </h3>
+              <p class="text-sm text-gray-600">Chief Executive</p>
+            </div>
+          </div>
+
+          <div
+            class="p-0 m-0 overflow-hidden transition duration-300 ease-in-out break-inside-avoid text-center"
+          >
+            <div class="w-full aspect-4/5 overflow-hidden">
+              <img
+                src="../images/p5.jpg"
+                alt="Tamara Bellis"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-4 mt-2">
+              <h3 class="text-xl font-bold text-gray-900 mb-0">
+                Tamara Bellis
+              </h3>
+              <p class="text-sm text-gray-600">Customer Support</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center mt-10 space-x-2">
+          <span class="w-3 h-3 bg-red-500 rounded-full"></span>
+          <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+          <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="relative m-auto h-[35rem] grid-cols-2 gap-4 bg-white overflow-hidden"
+    >
+      <!-- Left stacked image collage -->
+      <div
+        class="absolute left-[10%] top-4 h-2xl w-3xl flex flex-col space-y-6"
+      >
+        <img
+          src="../images/81yn0Wf9jnL.jpg"
+          class="w-52 h-32 object-cover rounded-lg transform rotate-[-10deg] shadow-lg"
+        />
+        <img
+          src="../images/FeUAgholARa1ROS.webp"
+          class="w-56 h-32 object-cover rounded-lg transform rotate-[5deg] shadow-lg ml-10"
+        />
+        <img
+          src="../images/people looking at map.jpg"
+          class="w-48 h-32 object-cover rounded-lg transform rotate-[-4deg] shadow-lg ml-16"
+        />
+      </div>
+
+      <div class="max-w-4xl justify-end text-center absolute right-[15%]">
+        <p
+          class="text-lg italic mb-1 text-red-500"
+          style="font-family: 'Times New Roman', Times, serif"
+        >
+          Testimonials
+        </p>
+
+        <h2 class="text-4xl md:text-5xl font-extrabold text-blue-950 mb-6">
+          What Travelers Say
+        </h2>
+
+        <div class="flex justify-center mb-4">
+          <img
+            src="../images/format_quote_24dp_EAC452_FILL0_wght400_GRAD0_opsz24.svg"
+            class="w-8 h-8"
+            alt=""
+          />
+        </div>
+
+        <p class="text-lg text-indigo-950 leading-relaxed mb-6 font-serif">
+          “The UI designs he crafted are top-notch, and the<br />
+          design system he integrated allows for straight<br />
+          forward fixes and bulk updates throughout almost<br />
+          every area of the app.”
+        </p>
+
+        <p class="text-gray-500 text-sm">-By Molie Rosa, Photographer</p>
+
+        <div class="flex justify-center space-x-2 mt-10">
+          <span class="w-2.5 h-2.5 bg-red-500 rounded-full"></span>
+          <span class="w-2.5 h-2.5 bg-gray-300 rounded-full"></span>
+          <span class="w-2.5 h-2.5 bg-gray-300 rounded-full"></span>
+        </div>
+      </div>
+    </section>
+
     <section>
       <div
         class="flex flex-row justify-around items-center flex-wrap gap-6 py-8 md:py-12 text-black"
@@ -227,6 +581,7 @@
         />
       </div>
     </section>
+
     <footer class="bg-[#0f0f0f] text-gray-300">
       <div class="max-w-7xl mx-auto px-6 py-12">
         <div
@@ -236,7 +591,7 @@
             <div class="flex items-center gap-3 mb-6">
               <div
                 class="w-9 h-9 flex items-center justify-center rounded-full"
-                style="background-color: #f6c844"
+                style="background-color: #f73b3b"
               >
                 <img src="" />
               </div>
@@ -244,8 +599,8 @@
             </div>
 
             <p class="text-sm text-gray-400 italic mb-2">Need any help?</p>
-            <p class="text-yellow-400 font-semibold mb-4">
-              Call Us: <span class="text-yellow-300">(888) 1234 5678</span>
+            <p class="text-white font-semibold mb-4">
+              Call Us: <span class="text-red-400">(888) 1234 5678</span>
             </p>
 
             <address class="not-italic text-sm text-gray-400 mb-4">
@@ -326,7 +681,7 @@
           <!-- contact -->
           <div class="md:w-1/4 md:pl-6">
             <div class="pr-0 md:pr-6">
-              <h4 class="text-sm text-gray-300 font-medium mb-4">
+              <h4 class="text-sm text-gray-100 font-medium mb-4">
                 Sign up Newsletter
               </h4>
 
@@ -337,12 +692,12 @@
                   type="email"
                   placeholder="Enter email..."
                   required
-                  class="flex-1 px-3 py-2 rounded-md bg-gray-200 border border-gray-700 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  class="flex-1 px-3 py-2 rounded-md bg-gray-200 border border-gray-700 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-400"
                 />
 
                 <button
                   type="submit"
-                  class="px-4 py-2 mt-4 rounded-md bg-yellow-400 text-gray-900 font-semibold hover:opacity-95"
+                  class="px-4 py-2 mt-4 rounded-md bg-red-500 text-gray-900 font-semibold hover:opacity-95"
                 >
                   Submit
                 </button>
@@ -356,5 +711,89 @@
         </div>
       </div>
     </footer>
+
+    <!-- Sign-In overlay -->
+    <div
+      class="fixed inset-0 backdrop-blur bg-opacity-50 flex items-center justify-center transition-opacity duration-300 opacity-0 pointer-events-none z-50"
+      id="login-modal"
+    >
+      <div
+        class="bg-white p-8 rounded-lg shadow-2xl relative w-full max-w-md transform transition-all duration-300 scale-95"
+      >
+        <button
+          class="close-btn absolute top-3 right-3 text-gray-500 hover:text-gray-900 transition-colors"
+          id="close-modal-btn"
+        >
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+
+        <h1
+          id="sign-in-title"
+          class="text-3xl font-bold mb-6 text-center text-gray-800"
+        >
+          Sign In
+        </h1>
+
+        <form action="/login" method="POST" id="login-form">
+          <!-- EMAIL FIELD -->
+          <div class="input_control mb-4 email-control">
+            <label for="email" class="hidden">Email</label>
+            <div
+              class="flex items-center border border-gray-300 rounded-md focus-within:ring-2 focus-within:ring-blue-500"
+            >
+              <i class="fa-solid fa-envelope text-gray-400 px-3"></i>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+                class="w-full py-2 px-3 border-none focus:outline-none rounded-r-md"
+              />
+            </div>
+            <div class="error-message text-sm text-red-500 mt-1 h-4"></div>
+          </div>
+
+          <!-- PASSWORD FIELD -->
+          <div class="input_control password_field mb-6 password-control">
+            <label for="password" class="hidden">Password</label>
+            <div
+              class="flex items-center border border-gray-300 rounded-md focus-within:ring-2 focus-within:ring-blue-500"
+            >
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                required
+                class="w-full py-2 px-3 border-none focus:outline-none rounded-l-md"
+              />
+              <i
+                class="fa-regular fa-eye text-gray-400 pr-8 cursor-pointer hover:text-gray-600 transition-colors"
+                id="togglePassword"
+              ></i>
+            </div>
+            <div class="error-message text-sm text-red-500 mt-1 h-4"></div>
+          </div>
+
+          <p id="forgot-password" class="text-sm text-gray-600 mb-6">
+            Lost your password?
+            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium"
+              >Click here</a
+            >
+          </p>
+
+          <button
+            class="w-full py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            type="submit"
+            id="sign-in-btn"
+          >
+            Sign In
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

@@ -3,37 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Blog - Trisog</title>
+    <link href="../output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
     <script
       src="https://kit.fontawesome.com/2ce14ed893.js"
       crossorigin="anonymous"
     ></script>
+
     <style>
       .header-bg {
-        background-image: url("../images/contact-hero-img.jpg");
+        background-image: url("../images/o-santuario-cristo-redentor.jpg");
         background-size: cover;
-        background-position: center;
-      }
-      .map-container {
-        position: relative;
-        padding-bottom: 75%;
-        height: 0;
-        overflow: hidden;
-      }
-      .map-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
+        background-position: 50% 20%;
       }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
-  <body class="bg-white">
-    <!-- Top contact strip -->
+  <body>
     <div class="bg-gray-100 text-sm text-gray-600 sticky top-0 align-top z-50">
       <div
         class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center"
@@ -57,9 +44,7 @@
         <img src="/images/Slice_5-removebg-preview.png" class="logo" />
         <ul class="flex gap-5 mr-64 -ml-32">
           <li>
-            <a class="cursor-pointer hover:text-red-400" href="index.html"
-              >Home</a
-            >
+            <a class="cursor-pointer hover:text-red-400" href="#">Home</a>
           </li>
           <li>
             <a class="cursor-pointer hover:text-red-400" href="tour.html"
@@ -122,141 +107,192 @@
       </nav>
     </header>
 
-    <section
-      class="header-bg relative h-64 flex items-center justify-center text-white"
-    >
-      <div class="absolute inset-0 bg-blue-950 opacity-50"></div>
-
-      <div class="relative z-10 text-center">
-        <h1 class="text-5xl font-bold mb-2">Contact Us</h1>
-        <p class="text-base">
-          <a class="cursor-pointer hover:text-red-400" href="index.html"
-            >Home</a
+    <section class="py-12">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-sm text-center mb-10">
+          <a href="index.html" class="text-gray-500 hover:text-red-500">Home</a>
+          <span class="mx-2 text-gray-400">/</span>
+          <a href="Blog.html" class="text-gray-500 hover:text-red-500">Blog</a>
+          <span class="mx-2 text-gray-400">/</span>
+          <span class="text-red-500 font-medium" id="article-breadcrumb-title"
+            >Blog Details</span
           >
-          <a class="cursor-pointer" href="">/</a>
-          <a class="cursor-pointer hover:text-red-400" href="">Contact</a>
-        </p>
+        </div>
+
+        <div class="mb-10">
+          <img
+            id="article-image"
+            src=""
+            alt=""
+            class="w-full h-auto object-cover rounded-lg shadow-lg"
+          />
+        </div>
+
+        <div class="max-w-3xl mx-auto">
+          <div
+            class="flex items-center text-sm text-gray-500 mb-4 space-x-4"
+            id="article-meta"
+          >
+            <p>Loading metadata...</p>
+          </div>
+
+          <h1
+            id="article-title"
+            class="text-3xl sm:text-4xl font-bold text-gray-800 mb-8 leading-tight"
+          >
+            Loading Title...
+          </h1>
+
+          <div class="text-gray-700 space-y-6 text-lg" id="article-body">
+            <p>Loading article content...</p>
+          </div>
+
+          <div
+            class="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center mt-12 pt-6 border-t border-gray-200"
+          >
+            <div class="flex items-center mb-4 sm:mb-0"></div>
+
+            <div class="flex flex-wrap gap-2" id="article-tags"></div>
+          </div>
+        </div>
       </div>
-      <div class="absolute bottom-0 z-0"></div>
     </section>
 
-    <main class="container mx-auto px-4 py-16">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-        <div class="p-12 bg-gray-50 rounded-lg flex-col items-start">
-          <img
-            src="../images/location_on_36dp_EA3323_FILL0_wght400_GRAD0_opsz40.svg"
-            alt="Phone"
-            class="mr-4 my-4"
-          />
-          <div>
-            <p class="text-gray-700 font-semibold text-lg">Location</p>
-            <p class="text-gray-500 text-sm">210, Love Street, Muscat, Oman</p>
+    <section>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+        <div class="max-w-3xl mx-auto">
+          <div
+            class="mt-12 p-6 bg-gray-50 rounded-lg flex items-start space-x-4 border border-gray-100 shadow-sm"
+          >
+            <div class="shrink-0">
+              <img
+                class="h-20 w-20 rounded-full object-cover"
+                src="../images/p1.jpg"
+                alt="Sindy Simmons"
+              />
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-blue-700">Sindy Simmons</h4>
+              <p class="text-sm text-gray-500 mb-2">Author</p>
+              <p class="text-gray-600 text-sm">
+                Objectively productivate just in time information with dynamic
+                channels. Energistically exploit seamless growth strategies
+                after 24/7 experiences.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div class="p-12 bg-gray-50 rounded-lg flex-col items-start">
-          <img
-            src="../images/phone_in_talk_36dp_EA3323_FILL0_wght400_GRAD0_opsz40.svg"
-            alt="Phone"
-            class="mr-4 my-4"
-          />
-          <div>
-            <p class="text-gray-700 font-semibold text-lg">Phone</p>
-            <p class="text-gray-500 text-sm">+968 98888033</p>
+          <div
+            class="mt-12 py-6 border-y border-gray-200 flex justify-between items-center text-sm"
+          >
+            <a
+              href="#"
+              class="flex items-center text-gray-600 hover:text-red-500 transition"
+            >
+              <i class="fa-solid fa-arrow-left w-4 h-4 mr-2"></i>
+              <span class="font-semibold">Prev</span>
+            </a>
+
+            <a
+              href="#"
+              class="hidden sm:block flex-1 max-w-[45%] p-3 rounded-lg hover:bg-gray-50 transition"
+            >
+              <div class="flex items-start space-x-4">
+                <img
+                  class="w-16 h-16 object-cover rounded-md shrink-0"
+                  src="../images/images (2).jpg"
+                  alt="Previous Post"
+                />
+                <div>
+                  <p class="text-xs text-gray-500 mb-1">Sep 26, 2021 • Admin</p>
+                  <h5
+                    class="text-sm font-semibold text-gray-800 hover:text-red-500 leading-tight"
+                  >
+                    The Impact of Covid-19 on travel & turisom industry
+                  </h5>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="#"
+              class="hidden sm:block flex-1 max-w-[45%] p-3 rounded-lg hover:bg-gray-50 transition"
+            >
+              <div class="flex items-start space-x-4">
+                <img
+                  class="w-16 h-16 object-cover rounded-md shrink-0"
+                  src="../images/255_270_smapse-sovety-turistam-cego-ne-stoit-delat-v-azerbajdzane-1.jpeg"
+                  alt="Previous Post"
+                />
+                <div>
+                  <p class="text-xs text-gray-500 mb-1">Sep 26, 2021 • Admin</p>
+                  <h5
+                    class="text-sm font-semibold text-gray-800 hover:text-red-500 leading-tight"
+                  >
+                    The Impact of Covid-19 on travel & turisom industry
+                  </h5>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="#"
+              class="flex items-center text-gray-600 hover:text-red-500 transition"
+            >
+              <span class="font-semibold">Next</span>
+              <i class="fa-solid fa-arrow-right w-4 h-4 ml-2"></i>
+            </a>
           </div>
-        </div>
 
-        <div class="p-12 bg-gray-50 rounded-lg flex-col items-start">
-          <img
-            src="../images/mail_36dp_EA3323_FILL0_wght400_GRAD0_opsz40.svg"
-            alt="Phone"
-            class="mr-4 my-4"
-          />
-          <div>
-            <p class="text-gray-700 font-semibold text-lg">Email</p>
-            <p class="text-gray-500 text-sm">support@onivag.com</p>
+          <div class="mt-12" id="article-comments-section">
+            <p>Loading comments...</p>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <div>
-          <p class="text-red-500 font-medium italic mb-1">Have any question?</p>
-          <h2 class="text-4xl font-extrabold text-gray-800 mb-8">
-            Get in Touch
-          </h2>
-
-          <form
-            action="https://api.web3forms.com/submit"
-            method="POST"
-            class="space-y-6"
-          >
-            <!-- Web3Forms Fields -->
-            <input
-              type="hidden"
-              name="access_key"
-              value="b75ffd1e-2413-4a61-9b41-6971d744ee7a"
-            />
-            <input
-              type="hidden"
-              name="subject"
-              value="New Contact Form Message"
-            />
-            <input
-              type="hidden"
-              name="redirect"
-              value="https://yourwebsite.com/thankyou.html"
-            />
-
-            <div class="flex flex-col md:flex-row gap-6">
+    <section class="pb-12">
+      <div class="bg-gray-100 p-8 rounded-md shadow-lg max-w-3xl mx-auto">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Leave Reply</h2>
+        <form action="https://api.web3forms.com/submit" method="post">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label for="name" class="sr-only">Your name</label>
               <input
                 type="text"
-                name="name"
+                id="name"
                 placeholder="Your name"
-                class="flex-1 p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                required
+                class="w-full px-4 py-2 border border-white bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
+            </div>
+            <div>
+              <label for="email" class="sr-only">Email address</label>
               <input
                 type="email"
-                name="email"
+                id="email"
                 placeholder="Email address"
-                class="flex-1 p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                required
+                class="w-full px-4 py-2 border border-white bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
-
-            <div>
-              <textarea
-                name="message"
-                placeholder="Write something..."
-                rows="6"
-                class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                required
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              class="w-auto px-10 py-3 bg-red-500 text-white font-bold rounded-lg hover:bg-red-600 transition duration-300"
-            >
-              Submit
-            </button>
-          </form>
-        </div>
-
-        <div class="map-container rounded-lg overflow-hidden shadow-xl">
-          <iframe
-            src="https://maps.google.com/maps?q=The%20Hague&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            frameborder="0"
-            style="border: 0"
-            allowfullscreen=""
-            aria-hidden="false"
-            tabindex="0"
+          </div>
+          <div class="mb-6">
+            <label for="comment" class="sr-only">Write your comment</label>
+            <textarea
+              id="comment"
+              placeholder="Write your comment"
+              rows="5"
+              class="w-full px-4 py-2 border border-white bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
           >
-          </iframe>
-        </div>
+            Post Comment
+          </button>
+        </form>
       </div>
-    </main>
+    </section>
 
     <footer class="bg-[#0f0f0f] text-gray-300">
       <div class="max-w-7xl mx-auto px-6 py-12">
@@ -471,5 +507,6 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="article.js"></script>
   </body>
 </html>

@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trisog Travel</title>
+    <link href="../output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=date_range"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=group"
+    />
+    <script
+      src="https://kit.fontawesome.com/2ce14ed893.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @keyframes move-anim-1 {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-50px);
+        }
+      }
+
+      .animate-move-anim-1 {
+        animation: move-anim-1 7s ease-in-out infinite;
+      }
+
+      .header-bg {
+        background-image: url("../images/tour-img.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+
+  <body class="bg-white font-body">
+    <!-- Top contact strip -->
+    <div class="bg-gray-100 text-sm text-gray-600 sticky top-0 align-top z-50">
+      <div
+        class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center"
+      >
+        <div>(000)999-898-999 &nbsp; | &nbsp; info@trisog.com</div>
+        <div class="flex items-center space-x-3">
+          <div class="hidden sm:flex items-center space-x-4 text-xs">
+            <a href="#" class="hover:underline">Twitter</a>
+            <a href="#" class="hover:underline">LinkedIn</a>
+            <a href="#" class="hover:underline">GBP</a>
+          </div>
+          <div class="text-xs">EUR <span class="ml-1">▾</span></div>
+        </div>
+      </div>
+    </div>
+
+    <header
+      class="bg-white text-base text-blue-950 border-b border-gray-300 w-full h-20 z-50 sticky top-9 align-top"
+    >
+      <nav class="navbar p-3 flex items-center justify-between max-[90%] mx-12">
+        <img src="/images/Slice_5-removebg-preview.png" class="logo" />
+        <ul class="flex gap-5 mr-64 -ml-32">
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="index.html">Home</a>
+          </li>
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="tour.html"
+              >Tours</a
+            >
+          </li>
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="Destination"
+              >Destination</a
+            >
+          </li>
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="Blog.html"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="about.html"
+              >About</a
+            >
+          </li>
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="contact.html"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <ul class="flex justify-evenly items-center gap-2 text-xs">
+          <li>
+            <i class="fa-solid fa-magnifying-glass flex cursor-pointer"></i>
+          </li>
+          <li id="user-icon">
+            <i class="fa-regular fa-user cursor-pointer"></i>
+          </li>
+
+          <li id="login-link-li">
+            <a
+              class="cursor-pointer hover:text-red-400"
+              href="#"
+              id="open-login-modal-nav"
+              >LogIn</a
+            >
+          </li>
+          <span id="auth-separator" class="cursor-pointer hover:text-red-400"
+            >/</span
+          >
+          <li id="signup-link-li">
+            <a class="cursor-pointer hover:text-red-400" href="#">SignUp</a>
+          </li>
+
+          <li id="logout-link-li" class="hidden">
+            <a
+              class="cursor-pointer hover:text-red-400"
+              href="#"
+              id="logout-btn"
+              >Log-Out</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <div
+        class="header-bg relative h-64 flex items-center justify-center text-white"
+      >
+        <div class="absolute inset-0 bg-blue-950 opacity-50"></div>
+
+        <div class="relative z-10 text-center">
+          <h1 class="text-5xl font-bold mb-2">Tour Package</h1>
+          <p class="text-base">
+            <a class="cursor-pointer hover:text-red-500" href="index.html"
+              >Home</a
+            >
+            <a class="cursor-pointer" href="">/</a>
+            <a class="cursor-pointer text-red-500 font-medium" href=""
+              >Tour Package</a
+            >
+          </p>
+        </div>
+        <div class="absolute bottom-0 z-0"></div>
+      </div>
+
+      <div
+        class="flex justify-center items-center py-20min-h-screen relative z-10 bottom-10"
+      >
+        <div
+          class="bg-white p-6 rounded-xl shadow-lg flex items-end space-x-4 max-w-6xl w-full mx-auto"
+        >
+          <div class="search-field flex-1">
+            <label
+              for="destination"
+              class="block text-sm font-medium text-gray-500 mb-1 italic font-serif"
+              style="font-family: 'Georgia', serif"
+              >Destination</label
+            >
+            <div class="relative flex items-center">
+              <i
+                class="fa-regular fa-paper-plane absolute left-3 text-gray-400"
+              ></i>
+              <input
+                type="text"
+                id="destination"
+                placeholder="Where to go?"
+                class="pl-10 pr-3 py-2 border border-gray-300 text-gray-500 rounded-md w-full focus:outline-none focus:ring-1 focus:ring-blue-500"
+              />
+            </div>
+          </div>
+
+          <div class="search-field flex-1">
+            <label
+              for="destination"
+              class="block text-sm font-medium text-gray-500 mb-1 italic font-serif"
+              style="font-family: 'Georgia', serif"
+              >Type</label
+            >
+            <div class="relative flex items-center">
+              <i class="fa-solid fa-flag absolute left-3 text-gray-400"></i>
+              <input
+                type="text"
+                id="type"
+                placeholder="Activity"
+                class="pl-10 pr-3 py-2 border border-gray-300 text-gray-500 rounded-md w-full focus:outline-none focus:ring-1 focus:ring-blue-500"
+              />
+            </div>
+          </div>
+
+          <div class="search-field flex-1">
+            <label
+              for="destination"
+              class="block text-sm font-medium text-gray-500 mb-1 italic font-serif"
+              style="font-family: 'Georgia', serif"
+              >When</label
+            >
+            <div class="relative flex items-center">
+              <i
+                class="fa-regular fa-calendar absolute left-3 text-gray-400"
+              ></i>
+              <input
+                type="text"
+                id="when"
+                placeholder="Date"
+                class="pl-10 pr-3 py-2 border border-gray-300 rounded-md text-gray-500 w-full focus:outline-none focus:ring-1 focus:ring-blue-500"
+              />
+            </div>
+          </div>
+
+          <div class="search-field flex-1">
+            <label
+              for="destination"
+              class="block text-sm font-medium text-gray-500 mb-1 italic font-serif"
+              style="font-family: 'Georgia', serif"
+              >Guests</label
+            >
+            <div class="relative flex items-center">
+              <i
+                class="fa-solid fa-user-group absolute left-3 text-gray-400"
+              ></i>
+              <input
+                type="text"
+                id="guests"
+                placeholder="0"
+                class="pl-10 pr-3 py-2 border border-gray-300 rounded-md w-full text-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              />
+            </div>
+          </div>
+
+          <button
+            id="search-btn"
+            class="bg-red-400 hover:bg-red-500 text-gray-50 font-bold py-2 px-6 rounded-md transition duration-200 ease-in-out self-end"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex flex-row min-h-screen">
+      <article
+        class="sticky top-0 h-min w-64 flex flex-col gap-y-8 p-4 pt-10 ml-16"
+      >
+        <div class="bg-gray-100 p-4 shadow-sm border border-gray-200">
+          <h3 class="text-sm font-semibold text-gray-600 mb-3">Search</h3>
+          <div class="relative">
+            <input
+              type="text"
+              class="w-full border border-gray-300 bg-white text-gray-700 rounded-md px-3 py-2 text-sm focus:ring focus:ring-red-200 placeholder-gray-400"
+              placeholder="Type anything..."
+            />
+            <i
+              class="fa-solid fa-magnifying-glass absolute right-3 top-2.5 text-gray-400 text-sm"
+            ></i>
+          </div>
+        </div>
+
+        <div class="bg-gray-100 p-4 shadow-sm border border-gray-200">
+          <h3 class="text-sm font-semibold text-gray-600 mb-3">Filter By</h3>
+          <input type="range" min="0" max="150" class="w-full" />
+          <div class="flex justify-between text-xs text-gray-500 mt-2">
+            <span class="text-sm text-gray-700 font-medium">$0.00</span>
+            <span class="text-sm text-gray-700 font-medium">$150.00</span>
+          </div>
+          <button
+            class="mt-4 bg-red-500 text-white text-sm py-2 px-4 rounded-md w-2/4 hover:bg-red-600 transition"
+          >
+            Submit
+          </button>
+        </div>
+
+        <div class="space-y-3 bg-gray-100 p-4 shadow-sm border border-gray-200">
+          <h3 class="text-sm font-semibold text-gray-600">Categories</h3>
+          <ul class="text-sm text-gray-600 space-y-2">
+            <li>
+              <label
+                ><input
+                  type="checkbox"
+                  class="mr-2 accent-red-500"
+                />Adventure</label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="checkbox"
+                  class="mr-2 accent-red-500"
+                />Beaches</label
+              >
+            </li>
+            <li>
+              <label
+                ><input type="checkbox" class="mr-2 accent-red-500" />Boat
+                Tours</label
+              >
+            </li>
+            <li>
+              <label
+                ><input type="checkbox" class="mr-2 accent-red-500" />City
+                Tours</label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="checkbox"
+                  class="mr-2 accent-red-500"
+                />Food</label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="checkbox"
+                  class="mr-2 accent-red-500"
+                />Hiking</label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="checkbox"
+                  class="mr-2 accent-red-500"
+                />Honeymoon</label
+              >
+            </li>
+            <li>
+              <label
+                ><input type="checkbox" class="mr-2 accent-red-500" />Museum
+                Tours</label
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="space-y-4 bg-gray-100 p-4 shadow-sm border border-gray-200">
+          <h3 class="text-sm font-semibold text-gray-600">Destinations</h3>
+
+          <div class="text-sm text-gray-600 space-y-2 flex flex-col">
+            <p class="font-bold text-gray-800">Africa</p>
+            <label
+              ><input
+                type="checkbox"
+                class="mr-2 accent-red-500"
+              />Morocco</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                class="mr-2 accent-red-500"
+              />Tanzania</label
+            >
+
+            <p class="font-bold mt-3 text-gray-800">Americas</p>
+            <label
+              ><input
+                type="checkbox"
+                class="mr-2 accent-red-500"
+              />Argentina</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                class="mr-2 accent-red-500"
+              />Canada</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                class="mr-2 accent-red-500"
+              />Colombia</label
+            >
+            <label
+              ><input type="checkbox" class="mr-2 accent-red-500" />Costa
+              Rica</label
+            >
+
+            <p class="font-bold mt-3 text-gray-800">Asia</p>
+            <label
+              ><input
+                type="checkbox"
+                class="mr-2 accent-red-500"
+              />Cambodia</label
+            >
+            <label
+              ><input type="checkbox" class="mr-2 accent-red-500" />Japan</label
+            >
+            <label
+              ><input type="checkbox" class="mr-2 accent-red-500" />Nepal</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                class="mr-2 accent-red-500"
+              />Thailand</label
+            >
+            <label
+              ><input type="checkbox" class="mr-2 accent-red-500" />Viet
+              Nam</label
+            >
+
+            <p class="font-bold mt-3 text-gray-800">Europe</p>
+            <label
+              ><input
+                type="checkbox"
+                class="mr-2 accent-red-500"
+              />France</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                class="mr-2 accent-red-500"
+              />Greece</label
+            >
+          </div>
+        </div>
+
+        <div class="bg-gray-100 p-4 shadow-sm border border-gray-200">
+          <h3 class="text-sm font-semibold text-gray-600 mb-3">Reviews</h3>
+          <ul class="text-sm text-gray-600 space-y-2">
+            <li>
+              <label
+                ><input type="checkbox" class="mr-2 accent-red-500" />5
+                Stars</label
+              >
+            </li>
+            <li>
+              <label
+                ><input type="checkbox" class="mr-2 accent-red-500" />4 Stars &
+                Up</label
+              >
+            </li>
+            <li>
+              <label
+                ><input type="checkbox" class="mr-2 accent-red-500" />3 Stars &
+                Up</label
+              >
+            </li>
+            <li>
+              <label
+                ><input type="checkbox" class="mr-2 accent-red-500" />2 Stars &
+                Up</label
+              >
+            </li>
+            <li>
+              <label
+                ><input type="checkbox" class="mr-2 accent-red-500" />1 Stars &
+                Up</label
+              >
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <main class="flex-1 pr-20">
+        <div class="flex justify-between items-center mt-6 mb-8 px-4">
+          <p class="text-gray-600 text-sm">10 Tours</p>
+
+          <div class="flex items-center gap-4 text-sm text-gray-600">
+            <div class="flex items-center gap-2">
+              <span>Sort By</span>
+              <select class="border border-gray-300 rounded px-2 py-1 text-sm">
+                <option>Title</option>
+                <option>Price</option>
+                <option>Rating</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+          <div
+            class="bg-white rounded-lg shadow hover:shadow-lg border border-gray-200 overflow-hidden"
+          >
+            <div class="relative h-48">
+              <a href="pages.html">
+                <img
+                  src="../images/tour-1.png"
+                  class="w-full h-full object-cover"
+                />
+              </a>
+              <button
+                class="absolute top-3 right-3 p-2 bg-white rounded-full shadow text-gray-500 hover:text-red-500"
+              >
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+
+            <div class="p-4 space-y-3">
+              <p class="text-gray-500 text-xs">Budapest, Hungary</p>
+              <h3 class="font-bold text-gray-900 leading-tight">
+                Wonders of the West Coast & Kimberley
+              </h3>
+              <div class="flex items-center text-yellow-500 text-xs gap-1">
+                <i class="fas fa-star"></i>
+                <span class="font-semibold text-gray-700 ml-1">4.8</span>
+                <span class="text-gray-500">(15 reviews)</span>
+                <span class="text-gray-500 ml-auto">7 days</span>
+              </div>
+              <div
+                class="flex justify-between items-center pt-3 border-t border-gray-100 text-sm"
+              >
+                <p class="text-gray-500">Starting From</p>
+                <p class="text-red-500 font-bold text-lg">$520</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow hover:shadow-lg border border-gray-200 overflow-hidden"
+          >
+            <div class="relative h-48">
+              <img
+                src="../images/images (1).jpg"
+                class="w-full h-full object-cover"
+              />
+              <button
+                class="absolute top-3 right-3 p-2 bg-white rounded-full shadow text-gray-500 hover:text-red-500"
+              >
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="p-4 space-y-3">
+              <p class="text-gray-500 text-xs">Greater London, UK</p>
+              <h3 class="font-bold text-gray-900 leading-tight">
+                Windsor Castle, and Bath from London
+              </h3>
+              <div class="flex items-center text-yellow-500 text-xs gap-1">
+                <i class="fas fa-star"></i>
+                <span class="font-semibold text-gray-700 ml-1">4.0</span>
+                <span class="text-gray-500">(15 reviews)</span>
+                <span class="text-gray-500 ml-auto">7 days</span>
+              </div>
+              <div
+                class="flex justify-between items-center pt-3 border-t border-gray-100 text-sm"
+              >
+                <p class="text-gray-500">Starting From</p>
+                <p class="text-red-500 font-bold text-lg">$520</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow hover:shadow-lg border border-gray-200 overflow-hidden"
+          >
+            <div class="relative h-48">
+              <img
+                src="../images/australia-bus.jpg"
+                class="w-full h-full object-cover"
+              />
+              <button
+                class="absolute top-3 right-3 p-2 bg-white rounded-full shadow text-gray-500 hover:text-red-500"
+              >
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="p-4 space-y-3">
+              <p class="text-gray-500 text-xs">Australia</p>
+              <h3 class="font-bold text-gray-900 leading-tight">
+                Enchanting Great Barrier Reef, Aquatic Wonderland
+              </h3>
+              <div class="flex items-center text-yellow-500 text-xs gap-1">
+                <i class="fas fa-star"></i>
+                <span class="font-semibold text-gray-700 ml-1">4.0</span>
+                <span class="text-gray-500">(15 reviews)</span>
+                <span class="text-gray-500 ml-auto">7 days</span>
+              </div>
+              <div
+                class="flex justify-between items-center pt-3 border-t border-gray-100 text-sm"
+              >
+                <p class="text-gray-500">Starting From</p>
+                <p class="text-red-500 font-bold text-lg">$520</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow hover:shadow-lg border border-gray-200 overflow-hidden"
+          >
+            <div class="relative h-48">
+              <img
+                src="../images/oman-cliffs.jpg"
+                class="w-full h-full object-cover"
+              />
+              <button
+                class="absolute top-3 right-3 p-2 bg-white rounded-full shadow text-gray-500 hover:text-red-500"
+              >
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="p-4 space-y-3">
+              <p class="text-gray-500 text-xs">Oman</p>
+              <h3 class="font-bold text-gray-900 leading-tight">
+                Ancient Heritage and Desert Adventures
+              </h3>
+              <div class="flex items-center text-yellow-500 text-xs gap-1">
+                <i class="fas fa-star"></i>
+                <span class="font-semibold text-gray-700 ml-1">4.0</span>
+                <span class="text-gray-500">(15 reviews)</span>
+                <span class="text-gray-500 ml-auto">7 days</span>
+              </div>
+              <div
+                class="flex justify-between items-center pt-3 border-t border-gray-100 text-sm"
+              >
+                <p class="text-gray-500">Starting From</p>
+                <p class="text-red-500 font-bold text-lg">$520</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow hover:shadow-lg border border-gray-200 overflow-hidden"
+          >
+            <div class="relative h-48">
+              <img
+                src="../images/japan-lights.jpg"
+                class="w-full h-full object-cover"
+              />
+              <button
+                class="absolute top-3 right-3 p-2 bg-white rounded-full shadow text-gray-500 hover:text-red-500"
+              >
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="p-4 space-y-3">
+              <p class="text-gray-500 text-xs">Japan</p>
+              <h3 class="font-bold text-gray-900 leading-tight">
+                Captivating Tokyo, Serenity and Tradition
+              </h3>
+              <div class="flex items-center text-yellow-500 text-xs gap-1">
+                <i class="fas fa-star"></i>
+                <span class="font-semibold text-gray-700 ml-1">4.0</span>
+                <span class="text-gray-500">(15 reviews)</span>
+                <span class="text-gray-500 ml-auto">7 days</span>
+              </div>
+              <div
+                class="flex justify-between items-center pt-3 border-t border-gray-100 text-sm"
+              >
+                <p class="text-gray-500">Starting From</p>
+                <p class="text-red-500 font-bold text-lg">$520</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow hover:shadow-lg border border-gray-200 overflow-hidden"
+          >
+            <div class="relative h-48">
+              <img
+                src="../images/china-temple.jpg"
+                class="w-full h-full object-cover"
+              />
+              <button
+                class="absolute top-3 right-3 p-2 bg-white rounded-full shadow text-gray-500 hover:text-red-500"
+              >
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="p-4 space-y-3">
+              <p class="text-gray-500 text-xs">Beijing, China</p>
+              <h3 class="font-bold text-gray-900 leading-tight">
+                Southern Capitals City Meets Bush
+              </h3>
+              <div class="flex items-center text-yellow-500 text-xs gap-1">
+                <i class="fas fa-star"></i>
+                <span class="font-semibold text-gray-700 ml-1">4.0</span>
+                <span class="text-gray-500">(15 reviews)</span>
+                <span class="text-gray-500 ml-auto">7 days</span>
+              </div>
+              <div
+                class="flex justify-between items-center pt-3 border-t border-gray-100 text-sm"
+              >
+                <p class="text-gray-500">Starting From</p>
+                <p class="text-red-500 font-bold text-lg">$360</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow hover:shadow-lg border border-gray-200 overflow-hidden"
+          >
+            <div class="relative h-48">
+              <img
+                src="../images/italy-round.jpg"
+                class="w-full h-full object-cover"
+              />
+              <button
+                class="absolute top-3 right-3 p-2 bg-white rounded-full shadow text-gray-500 hover:text-red-500"
+              >
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="p-4 space-y-3">
+              <p class="text-gray-500 text-xs">Italy</p>
+              <h3 class="font-bold text-gray-900 leading-tight">
+                Romantic Venice, The City of Canals and Love
+              </h3>
+              <div class="flex items-center text-yellow-500 text-xs gap-1">
+                <i class="fas fa-star"></i>
+                <span class="font-semibold text-gray-700 ml-1">4.0</span>
+                <span class="text-gray-500">(15 reviews)</span>
+                <span class="text-gray-500 ml-auto">7 days</span>
+              </div>
+              <div
+                class="flex justify-between items-center pt-3 border-t border-gray-100 text-sm"
+              >
+                <p class="text-gray-500">Starting From</p>
+                <p class="text-red-500 font-bold text-lg">$800</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow hover:shadow-lg border border-gray-200 overflow-hidden"
+          >
+            <div class="relative h-48">
+              <img
+                src="../images/brazil-christ.jpg"
+                class="w-full h-full object-cover"
+              />
+              <button
+                class="absolute top-3 right-3 p-2 bg-white rounded-full shadow text-gray-500 hover:text-red-500"
+              >
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="p-4 space-y-3">
+              <p class="text-gray-500 text-xs">Brazil</p>
+              <h3 class="font-bold text-gray-900 leading-tight">
+                Lush Amazon Rainforest Waiting to Be Explored
+              </h3>
+              <div class="flex items-center text-yellow-500 text-xs gap-1">
+                <i class="fas fa-star"></i>
+                <span class="font-semibold text-gray-700 ml-1">4.0</span>
+                <span class="text-gray-500">(15 reviews)</span>
+                <span class="text-gray-500 ml-auto">7 days</span>
+              </div>
+              <div
+                class="flex justify-between items-center pt-3 border-t border-gray-100 text-sm"
+              >
+                <p class="text-gray-500">Starting From</p>
+                <p class="text-red-500 font-bold text-lg">$520</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow hover:shadow-lg border border-gray-200 overflow-hidden"
+          >
+            <div class="relative h-48">
+              <img
+                src="../images/egypt-columns.jpg"
+                class="w-full h-full object-cover"
+              />
+              <button
+                class="absolute top-3 right-3 p-2 bg-white rounded-full shadow text-gray-500 hover:text-red-500"
+              >
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="p-4 space-y-3">
+              <p class="text-gray-500 text-xs">Egypt</p>
+              <h3 class="font-bold text-gray-900 leading-tight">
+                Unraveling Ancient Wonders, Exploring Egypt
+              </h3>
+              <div class="flex items-center text-yellow-500 text-xs gap-1">
+                <i class="fas fa-star"></i>
+                <span class="font-semibold text-gray-700 ml-1">4.0</span>
+                <span class="text-gray-500">(15 reviews)</span>
+                <span class="text-gray-500 ml-auto">7 days</span>
+              </div>
+              <div
+                class="flex justify-between items-center pt-3 border-t border-gray-100 text-sm"
+              >
+                <p class="text-gray-500">Starting From</p>
+                <p class="text-red-500 font-bold text-lg">$300</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center items-center gap-2 mt-10 mb-10">
+          <button
+            class="p-2 border border-gray-300 rounded-full text-gray-500 hover:bg-gray-100 transition"
+          >
+            <i class="fas fa-angle-left text-sm"></i>
+          </button>
+          <button
+            class="w-8 h-8 flex items-center justify-center text-white font-semibold bg-red-500 rounded-full transition"
+          >
+            1
+          </button>
+          <button
+            class="w-8 h-8 flex items-center justify-center border border-gray-300 text-gray-600 rounded-full hover:bg-red-500 hover:text-white transition"
+          >
+            2
+          </button>
+          <button
+            class="w-8 h-8 flex items-center justify-center border border-gray-300 text-gray-600 rounded-full hover:bg-red-500 hover:text-white transition"
+          >
+            3
+          </button>
+          <button
+            class="p-2 border border-gray-300 rounded-full text-gray-500 hover:bg-gray-100 transition"
+          >
+            <i class="fas fa-angle-right text-sm"></i>
+          </button>
+        </div>
+      </main>
+    </section>
+
+    <footer class="bg-[#0f0f0f] text-gray-300">
+      <div class="max-w-7xl mx-auto px-6 py-12">
+        <div
+          class="flex flex-col md:flex-row md:items-start md:divide-x md:divide-gray-800"
+        >
+          <div class="md:w-1/4 md:pr-6 pb-8 md:pb-0">
+            <div class="flex items-center gap-3 mb-6">
+              <div
+                class="w-9 h-9 flex items-center justify-center rounded-full"
+                style="background-color: #f73b3b"
+              >
+                <img src="" />
+              </div>
+              <span class="text-white font-semibold text-lg">Trisog</span>
+            </div>
+
+            <p class="text-sm text-gray-400 italic mb-2">Need any help?</p>
+            <p class="text-white font-semibold mb-4">
+              Call Us: <span class="text-red-400">(888) 1234 5678</span>
+            </p>
+
+            <address class="not-italic text-sm text-gray-400 mb-4">
+              Love Street, Muscat, Oman<br />
+              example@trisog.com
+            </address>
+
+            <div class="flex gap-3">
+              <a
+                aria-label="facebook"
+                href="#"
+                class="p-2 bg-gray-800 rounded-sm hover:bg-gray-700"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                aria-label="twitter"
+                href="#"
+                class="p-2 bg-gray-800 rounded-sm hover:bg-gray-700"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                aria-label="linkedin"
+                href="#"
+                class="p-2 bg-gray-800 rounded-sm hover:bg-gray-700"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+
+          <!--lists -->
+          <div class="md:w-2/4 md:px-6 pb-8 md:pb-0">
+            <div class="grid grid-cols-3 gap-6">
+              <div>
+                <h4 class="text-sm text-gray-300 font-medium mb-4">Company</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                  <li><a href="#" class="hover:text-white">About Us</a></li>
+                  <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                  <li>
+                    <a href="#" class="hover:text-white">Travel Guides</a>
+                  </li>
+                  <li><a href="#" class="hover:text-white">Data Policy</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="text-sm text-gray-300 font-medium mb-4">
+                  Top Destination
+                </h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                  <li><a href="#" class="hover:text-white">Las Vegas</a></li>
+                  <li>
+                    <a href="#" class="hover:text-white">New York City</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white">San Francisco</a>
+                  </li>
+                  <li><a href="#" class="hover:text-white">Hawaii</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="text-sm text-gray-300 font-medium mb-4">
+                  Top Destination
+                </h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                  <li><a href="#" class="hover:text-white">Tokyo</a></li>
+                  <li><a href="#" class="hover:text-white">Sydney</a></li>
+                  <li><a href="#" class="hover:text-white">Melbourne</a></li>
+                  <li><a href="#" class="hover:text-white">Dubai</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- contact -->
+          <div class="md:w-1/4 md:pl-6">
+            <div class="pr-0 md:pr-6">
+              <h4 class="text-sm text-gray-100 font-medium mb-4">
+                Sign up Newsletter
+              </h4>
+
+              <form action="https://api.web3forms.com/submit" method="post" class="block items-center">
+                <label for="email" class="sr-only">Email</label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Enter email..."
+                  required
+                  class="flex-1 px-3 py-2 rounded-md bg-gray-200 border border-gray-700 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-400"
+                />
+
+                <button
+                  type="submit"
+                  class="px-4 py-2 mt-4 rounded-md bg-red-500 text-white font-semibold hover:opacity-95"
+                >
+                  Submit
+                </button>
+              </form>
+
+              <p class="text-xs text-gray-500 mt-6">
+                &copy; 2023 Trisog All Rights Reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Sign-In overlay -->
+    <div
+      class="fixed inset-0 backdrop-blur bg-opacity-50 flex items-center justify-center transition-opacity duration-300 opacity-0 pointer-events-none z-50"
+      id="login-modal"
+    >
+      <div
+        class="bg-white p-8 rounded-lg shadow-2xl relative w-full max-w-md transform transition-all duration-300 scale-95"
+      >
+        <button
+          class="close-btn absolute top-3 right-3 text-gray-500 hover:text-gray-900 transition-colors"
+          id="close-modal-btn"
+        >
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+
+        <h1
+          id="sign-in-title"
+          class="text-3xl font-bold mb-6 text-center text-gray-800"
+        >
+          Sign In
+        </h1>
+
+        <form action="/login" method="POST" id="login-form">
+          <!-- EMAIL FIELD -->
+          <div class="input_control mb-4 email-control">
+            <label for="email" class="hidden">Email</label>
+            <div
+              class="flex items-center border border-gray-300 rounded-md focus-within:ring-2 focus-within:ring-blue-500"
+            >
+              <i class="fa-solid fa-envelope text-gray-400 px-3"></i>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+                class="w-full py-2 px-3 border-none focus:outline-none rounded-r-md"
+              />
+            </div>
+            <div class="error-message text-sm text-red-500 mt-1 h-4"></div>
+          </div>
+
+          <!-- PASSWORD FIELD -->
+          <div class="input_control password_field mb-6 password-control">
+            <label for="password" class="hidden">Password</label>
+            <div
+              class="flex items-center border border-gray-300 rounded-md focus-within:ring-2 focus-within:ring-blue-500"
+            >
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                required
+                class="w-full py-2 px-3 border-none focus:outline-none rounded-l-md"
+              />
+              <i
+                class="fa-regular fa-eye text-gray-400 pr-8 cursor-pointer hover:text-gray-600 transition-colors"
+                id="togglePassword"
+              ></i>
+            </div>
+            <div class="error-message text-sm text-red-500 mt-1 h-4"></div>
+          </div>
+
+          <p id="forgot-password" class="text-sm text-gray-600 mb-6">
+            Lost your password?
+            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium"
+              >Click here</a
+            >
+          </p>
+
+          <button
+            class="w-full py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            type="submit"
+            id="sign-in-btn"
+          >
+            Sign In
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
