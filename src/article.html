@@ -95,7 +95,6 @@
             <a class="cursor-pointer hover:text-red-400" href="#">SignUp</a>
           </li>
 
-          
           <li id="logout-link-li" class="hidden">
             <a
               class="cursor-pointer hover:text-red-400"
@@ -255,7 +254,7 @@
     <section class="pb-12">
       <div class="bg-gray-100 p-8 rounded-md shadow-lg max-w-3xl mx-auto">
         <h2 class="text-2xl font-semibold text-gray-800 mb-6">Leave Reply</h2>
-        <form>
+        <form action="https://api.web3forms.com/submit" method="post">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div>
               <label for="name" class="sr-only">Your name</label>
@@ -295,7 +294,7 @@
       </div>
     </section>
 
-<footer class="bg-[#0f0f0f] text-gray-300">
+    <footer class="bg-[#0f0f0f] text-gray-300">
       <div class="max-w-7xl mx-auto px-6 py-12">
         <div
           class="flex flex-col md:flex-row md:items-start md:divide-x md:divide-gray-800"
@@ -410,7 +409,7 @@
 
                 <button
                   type="submit"
-                  class="px-4 py-2 mt-4 rounded-md bg-red-500 text-gray-900 font-semibold hover:opacity-95"
+                  class="px-4 py-2 mt-4 rounded-md bg-red-500 text-white font-semibold hover:opacity-95"
                 >
                   Submit
                 </button>
@@ -425,7 +424,7 @@
       </div>
     </footer>
 
-<!-- Sign-In overlay -->
+    <!-- Sign-In overlay -->
     <div
       class="fixed inset-0 backdrop-blur bg-opacity-50 flex items-center justify-center transition-opacity duration-300 opacity-0 pointer-events-none z-50"
       id="login-modal"
