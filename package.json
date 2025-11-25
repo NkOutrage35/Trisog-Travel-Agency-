@@ -2,12 +2,11 @@
   "name": "tailwind-project",
   "version": "1.0.0",
   "scripts": {
-    "build-css": "postcss ./src/input.css -o ./output.css --watch"
-  },
-  "dependencies": {
-    "@tailwindcss/postcss": "^4.1.15"
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
   },
   "devDependencies": {
-    "postcss-cli": "^11.0.1"
+    "tailwindcss": "^3.4.0",
+    "postcss": "^8.4.32",
+    "autoprefixer": "^10.4.20"
   }
 }

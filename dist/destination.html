@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Trisog — Destination (Recreation)</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="../output.css" rel="stylesheet" />
     <script>
       // Tailwind config: custom colors, font stacks similar to the design
       tailwind.config = {
@@ -25,13 +25,17 @@
         },
       };
     </script>
+    <script
+      src="https://kit.fontawesome.com/2ce14ed893.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
       rel="stylesheet"
     />
     <style>
       .hero-bg {
-        background-image: url("/mnt/data/04_Destinationt.jpg");
+        background-image: url("./images/destinations-img.jpg");
       }
       .glass {
         backdrop-filter: blur(6px);
@@ -72,26 +76,34 @@
       class="bg-white text-base text-blue-950 border-b border-gray-300 w-full h-20 z-50 sticky top-9 align-top"
     >
       <nav class="navbar p-3 flex items-center justify-between max-[90%] mx-12">
-        <img src="/images/Slice_5-removebg-preview.png" class="logo" />
+        <img src="./images/Slice_5-removebg-preview.png" class="logo" />
         <ul class="flex gap-5 mr-64 -ml-32">
-          <li><a class="cursor-pointer hover:text-red-400" href="index.html">Home</a></li>
           <li>
-            <a class="cursor-pointer hover:text-red-400" href="">Tours</a>
+            <a class="cursor-pointer hover:text-red-400" href="index.html"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="tour.html"
+              >Tours</a
+            >
           </li>
           <li>
             <a class="cursor-pointer hover:text-red-400" href="destination.html"
               >Destination</a
             >
           </li>
-          <li><a class="cursor-pointer hover:text-red-400" href="">Blog</a></li>
+          <li>
+            <a class="cursor-pointer hover:text-red-400" href="Blog.html"
+              >Blog</a
+            >
+          </li>
           <li>
             <a class="cursor-pointer hover:text-red-400" href="about.html"
               >About</a
             >
           </li>
-          <li>
-            <a class="cursor-pointer hover:text-red-400" href="">Pages</a>
-          </li>
+
           <li>
             <a class="cursor-pointer hover:text-red-400" href="contact.html"
               >Contact</a
@@ -108,7 +120,9 @@
           </li>
           <span class="cursor-pointer hover:text-red-400">/</span>
           <li>
-            <a class="cursor-pointer hover:text-red-400" href="">SignUp</a>
+            <a class="cursor-pointer hover:text-red-400" href="sign-up.html"
+              >SignUp</a
+            >
           </li>
         </ul>
       </nav>
@@ -123,89 +137,126 @@
         <h1 class="text-white text-4xl md:text-6xl font-extrabold text-center">
           Destination
         </h1>
-        <div class="text-sm text-white/80 text-center mt-2">
+        <div class="text-lg text-white/80 text-center mt-2">
           Home / <span class="text-red-400">Destination</span>
         </div>
       </div>
     </section>
 
     <!-- Search card overlapping hero -->
-    <div class="max-w-7xl mx-auto px-6 -mt-10 relative z-20">
+    <div class="max-w-7xl mx-auto px-6 opacity-[0.8] relative z-20">
       <div
-        class="glass bg-white/70 rounded-xl shadow-xl border border-white/30 p-4"
+        class="flex justify-center items-center py-20min-h-screen relative z-10 bottom-10"
       >
-        <form class="grid grid-cols-1 md:grid-cols-6 gap-3 items-center">
-          <div class="md:col-span-2">
-            <label class="text-xs text-gray-500">Destination</label>
-            <div class="mt-1 relative">
+        <div
+          class="bg-white p-6 rounded-xl shadow-lg flex items-end space-x-4 max-w-6xl w-full mx-auto"
+        >
+          <div class="search-field flex-1">
+            <label
+              for="destination"
+              class="block text-sm font-medium text-gray-500 mb-1 italic font-serif"
+              style="font-family: 'Georgia', serif"
+              >Destination</label
+            >
+            <div class="relative flex items-center">
+              <i
+                class="fa-regular fa-paper-plane absolute left-3 text-gray-400"
+              ></i>
               <input
                 type="text"
+                id="destination"
                 placeholder="Where to go?"
-                class="w-full rounded-lg border p-3 text-sm bg-white/90"
+                class="pl-10 pr-3 py-2 border border-gray-300 text-gray-500 rounded-md w-full focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
-              <span class="absolute left-3 top-3 text-gray-400"></span>
             </div>
           </div>
-          <div class="md:col-span-1">
-            <label class="text-xs text-gray-500">Type</label>
-            <select
-              class="w-full mt-1 rounded-lg border p-3 text-sm bg-white/90"
+
+          <div class="search-field flex-1">
+            <label
+              for="destination"
+              class="block text-sm font-medium text-gray-500 mb-1 italic font-serif"
+              style="font-family: 'Georgia', serif"
+              >Type</label
             >
-              <option>Activity</option>
-              <option>City</option>
-              <option>Nature</option>
-            </select>
-          </div>
-          <div class="md:col-span-1">
-            <label class="text-xs text-gray-500">When</label>
-            <input
-              id="dateInput"
-              type="date"
-              class="w-full mt-1 rounded-lg border p-2 text-sm bg-white/90"
-            />
-          </div>
-          <div class="md:col-span-1">
-            <label class="text-xs text-gray-500">Guests</label>
-            <div
-              class="mt-1 flex items-center border rounded-lg w-full p-2 bg-white/90"
-            >
-              <button type="button" id="decGuest" class="px-2">-</button>
+            <div class="relative flex items-center">
+              <i class="fa-solid fa-flag absolute left-3 text-gray-400"></i>
               <input
-                id="guestCount"
-                type="number"
-                value="0"
-                min="0"
-                class="w-full text-center text-sm outline-none"
+                type="text"
+                id="type"
+                placeholder="Activity"
+                class="pl-10 pr-3 py-2 border border-gray-300 text-gray-500 rounded-md w-full focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
-              <button type="button" id="incGuest" class="px-2">+</button>
             </div>
           </div>
-          <div class="md:col-span-1 flex justify-end">
-            <button
-              type="submit"
-              class="bg-red-400 hover:bg-red-500 text-white font-semibold rounded-lg px-6 py-3"
+
+          <div class="search-field flex-1">
+            <label
+              for="destination"
+              class="block text-sm font-medium text-gray-500 mb-1 italic font-serif"
+              style="font-family: 'Georgia', serif"
+              >When</label
             >
-              Search
-            </button>
+            <div class="relative flex items-center">
+              <i
+                class="fa-regular fa-calendar absolute left-3 text-gray-400"
+              ></i>
+              <input
+                type="text"
+                id="when"
+                placeholder="Date"
+                class="pl-10 pr-3 py-2 border border-gray-300 rounded-md text-gray-500 w-full focus:outline-none focus:ring-1 focus:ring-blue-500"
+              />
+            </div>
           </div>
-        </form>
+
+          <div class="search-field flex-1">
+            <label
+              for="destination"
+              class="block text-sm font-medium text-gray-500 mb-1 italic font-serif"
+              style="font-family: 'Georgia', serif"
+              >Guests</label
+            >
+            <div class="relative flex items-center">
+              <i
+                class="fa-solid fa-user-group absolute left-3 text-gray-400"
+              ></i>
+              <input
+                type="text"
+                id="guests"
+                placeholder="0"
+                class="pl-10 pr-3 py-2 border border-gray-300 rounded-md w-full text-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              />
+            </div>
+          </div>
+
+          <button
+            id="search-btn"
+            class="bg-red-400 hover:bg-red-500 text-gray-50 font-bold py-2 px-6 rounded-md transition duration-200 ease-in-out self-end"
+          >
+            Search
+          </button>
+        </div>
       </div>
     </div>
 
     <!-- Gallery grid -->
+
     <main class="max-w-7xl mx-auto px-6 py-12">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
         <!-- Row 1: three images + tall image -->
+
         <article class="md:col-span-3">
           <div class="relative rounded overflow-hidden shadow">
             <img
-              src="https://images.unsplash.com/photo-1505765055874-6c4d8f320c2a?q=80&w=1200&auto=format&fit=crop"
+              src="./images/destination-slide-1.png"
               alt="London Eye"
               class="w-full h-48 object-cover"
             />
+
             <div class="absolute inset-0 overlay-gradient flex items-end p-4">
               <div>
                 <div class="text-xs text-white/80">174,688 Travelers</div>
+
                 <div class="text-white text-lg card-title">United Kingdom</div>
               </div>
             </div>
@@ -215,13 +266,15 @@
         <article class="md:col-span-3">
           <div class="relative rounded overflow-hidden shadow">
             <img
-              src="https://images.unsplash.com/photo-1544832088-2f9c65d1d9d6?q=80&w=1200&auto=format&fit=crop"
+              src="./images/islamic-background-3geq4zxr1zau41q0.jpg"
               alt="Turkey"
               class="w-full h-48 object-cover"
             />
+
             <div class="absolute inset-0 overlay-gradient flex items-end p-4">
               <div>
                 <div class="text-xs text-white/80">174,688 Travelers</div>
+
                 <div class="text-white text-lg card-title">Turkey</div>
               </div>
             </div>
@@ -235,9 +288,11 @@
               alt="Switzerland"
               class="w-full h-48 object-cover"
             />
+
             <div class="absolute inset-0 overlay-gradient flex items-end p-4">
               <div>
                 <div class="text-xs text-white/80">174,688 Travelers</div>
+
                 <div class="text-white text-lg card-title">Switzerland</div>
               </div>
             </div>
@@ -247,13 +302,15 @@
         <article class="md:col-span-3">
           <div class="relative rounded overflow-hidden shadow h-full">
             <img
-              src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1200&auto=format&fit=crop"
+              src="./images/resize.webp"
               alt="France"
               class="w-full h-full object-cover min-h-[336px]"
             />
+
             <div class="absolute inset-0 overlay-gradient flex items-end p-4">
               <div>
                 <div class="text-xs text-white/80">174,688 Travelers</div>
+
                 <div class="text-white text-lg card-title">France</div>
               </div>
             </div>
@@ -261,6 +318,7 @@
         </article>
 
         <!-- Row 2: two medium images -->
+
         <article class="md:col-span-4">
           <div class="relative rounded overflow-hidden shadow">
             <img
@@ -268,9 +326,11 @@
               alt="Thailand"
               class="w-full h-48 object-cover"
             />
+
             <div class="absolute inset-0 overlay-gradient flex items-end p-4">
               <div>
                 <div class="text-xs text-white/80">174,688 Travelers</div>
+
                 <div class="text-white text-lg card-title">Thailand</div>
               </div>
             </div>
@@ -280,13 +340,15 @@
         <article class="md:col-span-8">
           <div class="relative rounded overflow-hidden shadow">
             <img
-              src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e0d5?q=80&w=1600&auto=format&fit=crop"
+              src="./images/sydney-opera-house.jpg"
               alt="Australia"
               class="w-full h-48 object-cover"
             />
+
             <div class="absolute inset-0 overlay-gradient flex items-end p-4">
               <div>
                 <div class="text-xs text-white/80">174,688 Travelers</div>
+
                 <div class="text-white text-lg card-title">Australia</div>
               </div>
             </div>
@@ -294,16 +356,19 @@
         </article>
 
         <!-- Row 3: large left + grid right -->
+
         <article class="md:col-span-3">
           <div class="relative rounded overflow-hidden shadow h-full">
             <img
-              src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1200&auto=format&fit=crop"
+              src="./images/dubai.jpg"
               alt="UAE"
               class="w-full h-[420px] object-cover"
             />
+
             <div class="absolute inset-0 overlay-gradient flex items-end p-4">
               <div>
                 <div class="text-xs text-white/80">174,688 Travelers</div>
+
                 <div class="text-white text-lg card-title">
                   United Arab Emirates
                 </div>
@@ -316,13 +381,15 @@
           <article class="col-span-1">
             <div class="relative rounded overflow-hidden shadow">
               <img
-                src="https://images.unsplash.com/photo-1508051123996-69f8caf4891d?q=80&w=1200&auto=format&fit=crop"
+                src="./images/rome.jpg"
                 alt="Italy"
                 class="w-full h-32 object-cover"
               />
+
               <div class="absolute inset-0 overlay-gradient flex items-end p-3">
                 <div>
                   <div class="text-xs text-white/80">174,688 Travelers</div>
+
                   <div class="text-white card-title">Italy</div>
                 </div>
               </div>
@@ -336,9 +403,11 @@
                 alt="Bangladesh"
                 class="w-full h-32 object-cover"
               />
+
               <div class="absolute inset-0 overlay-gradient flex items-end p-3">
                 <div>
                   <div class="text-xs text-white/80">174,688 Travelers</div>
+
                   <div class="text-white card-title">Bangladesh</div>
                 </div>
               </div>
@@ -348,13 +417,15 @@
           <article class="col-span-1">
             <div class="relative rounded overflow-hidden shadow">
               <img
-                src="https://images.unsplash.com/photo-1549880184-86f0e9a8d7b7?q=80&w=1200&auto=format&fit=crop"
+                src="./images/Great-Egyptian-Pyramids-of-Giza.jpg"
                 alt="Egypt"
                 class="w-full h-32 object-cover"
               />
+
               <div class="absolute inset-0 overlay-gradient flex items-end p-3">
                 <div>
                   <div class="text-xs text-white/80">174,688 Travelers</div>
+
                   <div class="text-white card-title">Egypt</div>
                 </div>
               </div>
@@ -364,13 +435,15 @@
           <article class="col-span-1">
             <div class="relative rounded overflow-hidden shadow">
               <img
-                src="https://images.unsplash.com/photo-1505483531331-2b2d6b9ae1f8?q=80&w=1200&auto=format&fit=crop"
+                src="./images/Taj_Mahal_(Edited).jpeg"
                 alt="India"
                 class="w-full h-32 object-cover"
               />
+
               <div class="absolute inset-0 overlay-gradient flex items-end p-3">
                 <div>
                   <div class="text-xs text-white/80">174,688 Travelers</div>
+
                   <div class="text-white card-title">India</div>
                 </div>
               </div>
@@ -380,13 +453,15 @@
           <article class="col-span-2">
             <div class="relative rounded overflow-hidden shadow">
               <img
-                src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1600&auto=format&fit=crop"
+                src="./images/Yueyang-Tower-001.jpg"
                 alt="China"
                 class="w-full h-32 object-cover"
               />
+
               <div class="absolute inset-0 overlay-gradient flex items-end p-3">
                 <div>
                   <div class="text-xs text-white/80">174,688 Travelers</div>
+
                   <div class="text-white card-title">China</div>
                 </div>
               </div>
@@ -397,69 +472,132 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-footer text-gray-200 mt-24">
-      <div
-        class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-8"
-      >
-        <div>
-          <div class="flex items-center space-x-3">
-            <!-- <div class="w-10 h-10 bg-gradient-to-r from-red-500 to-pink-400 rounded-full flex items-center justify-center text-white font-bold">TR</div>-->
-            <div class="text-white font-bold"><img src="" alt="logo" /></div>
-          </div>
-          <p class="mt-4 text-sm text-gray-300">
-            Need any help?<br /><span class="text-red-400 font-semibold"
-              >Call Us: (888)1234 5678</span
-            >
-          </p>
-          <p class="mt-4 text-xs text-gray-400">
-            Love Street, Muscat, Oman<br />example@trisog.com
-          </p>
-          <div class="mt-4 flex space-x-3 text-gray-400 text-sm">
-            <a href="#">facebook</a>
-            <a href="#">twitter</a>
-            <a href="#">linkedin</a>
-          </div>
-        </div>
+    <footer class="bg-[#0f0f0f] text-gray-300">
+      <div class="max-w-7xl mx-auto px-6 py-12">
+        <div
+          class="flex flex-col md:flex-row md:items-start md:divide-x md:divide-gray-800"
+        >
+          <div class="md:w-1/4 md:pr-6 pb-8 md:pb-0">
+            <div class="flex items-center gap-3 mb-6">
+              <div
+                class="w-9 h-9 flex items-center justify-center rounded-full"
+                style="background-color: #f73b3b"
+              >
+                <img src="" />
+              </div>
+              <span class="text-white font-semibold text-lg">Trisog</span>
+            </div>
 
-        <div class="border-l border-gray-700 pl-6">
-          <h4 class="text-white font-semibold mb-4">Company</h4>
-          <ul class="text-sm text-gray-400 space-y-2">
-            <li>About Us</li>
-            <li>Contact Us</li>
-            <li>Travel Guides</li>
-            <li>Data Policy</li>
-          </ul>
-        </div>
+            <p class="text-sm text-gray-400 italic mb-2">Need any help?</p>
+            <p class="text-white font-semibold mb-4">
+              Call Us: <span class="text-red-400">(888) 1234 5678</span>
+            </p>
 
-        <div class="border-l border-gray-700 pl-6">
-          <h4 class="text-white font-semibold mb-4">Top Destination</h4>
-          <div class="grid grid-cols-2 text-sm text-gray-400 gap-2">
-            <div>Las Vegas</div>
-            <div>Tokyo</div>
-            <div>New York City</div>
-            <div>Sydney</div>
-            <div>San Francisco</div>
-            <div>Melbourne</div>
-            <div>Hawaii</div>
-            <div>Dubai</div>
+            <address class="not-italic text-sm text-gray-400 mb-4">
+              Love Street, Muscat, Oman<br />
+              example@trisog.com
+            </address>
+
+            <div class="flex gap-3">
+              <a
+                aria-label="facebook"
+                href="#"
+                class="p-2 bg-gray-800 rounded-sm hover:bg-gray-700"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                aria-label="twitter"
+                href="#"
+                class="p-2 bg-gray-800 rounded-sm hover:bg-gray-700"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                aria-label="linkedin"
+                href="#"
+                class="p-2 bg-gray-800 rounded-sm hover:bg-gray-700"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="pl-6">
-          <h4 class="text-white font-semibold mb-4">Sign up Newsletter</h4>
-          <form class="flex flex-col space-y-3">
-            <input
-              type="email"
-              placeholder="Enter email..."
-              class="rounded p-3 text-sm bg-white/5 border border-white/5"
-            />
-            <button class="bg-red-400 py-2 rounded text-white font-medium">
-              Submit
-            </button>
-          </form>
-          <p class="text-xs text-gray-500 mt-6">
-            © 2023 Trisog All Right Reserved
-          </p>
+          <!--lists -->
+          <div class="md:w-2/4 md:px-6 pb-8 md:pb-0">
+            <div class="grid grid-cols-3 gap-6">
+              <div>
+                <h4 class="text-sm text-gray-300 font-medium mb-4">Company</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                  <li><a href="#" class="hover:text-white">About Us</a></li>
+                  <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                  <li>
+                    <a href="#" class="hover:text-white">Travel Guides</a>
+                  </li>
+                  <li><a href="#" class="hover:text-white">Data Policy</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="text-sm text-gray-300 font-medium mb-4">
+                  Top Destination
+                </h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                  <li><a href="#" class="hover:text-white">Las Vegas</a></li>
+                  <li>
+                    <a href="#" class="hover:text-white">New York City</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white">San Francisco</a>
+                  </li>
+                  <li><a href="#" class="hover:text-white">Hawaii</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="text-sm text-gray-300 font-medium mb-4">
+                  Top Destination
+                </h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                  <li><a href="#" class="hover:text-white">Tokyo</a></li>
+                  <li><a href="#" class="hover:text-white">Sydney</a></li>
+                  <li><a href="#" class="hover:text-white">Melbourne</a></li>
+                  <li><a href="#" class="hover:text-white">Dubai</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- contact -->
+          <div class="md:w-1/4 md:pl-6">
+            <div class="pr-0 md:pr-6">
+              <h4 class="text-sm text-gray-100 font-medium mb-4">
+                Sign up Newsletter
+              </h4>
+
+              <form class="block items-center">
+                <label for="email" class="sr-only">Email</label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Enter email..."
+                  required
+                  class="flex-1 px-3 py-2 rounded-md bg-gray-200 border border-gray-700 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-400"
+                />
+
+                <button
+                  type="submit"
+                  class="px-4 py-2 mt-4 rounded-md bg-red-500 text-white font-semibold hover:opacity-95"
+                >
+                  Submit
+                </button>
+              </form>
+
+              <p class="text-xs text-gray-500 mt-6">
+                &copy; 2023 Trisog All Rights Reserved
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

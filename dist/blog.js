@@ -1,4 +1,3 @@
-// Function to fetch article data and initialize the blog list page
 document.addEventListener("DOMContentLoaded", initializeBlog);
 
 async function initializeBlog() {
@@ -11,11 +10,9 @@ async function initializeBlog() {
     }
 
     const articles = await response.json();
-    // Call the function to render the articles on the page
     renderArticleList(articles);
   } catch (error) {
     console.error("Error loading blog data:", error);
-    // Display an error message if data loading fails
     displayListError(
       "Failed to load blog posts. Please check your JSON file path and format."
     );
@@ -23,8 +20,7 @@ async function initializeBlog() {
 }
 
 /**
- * Generates the HTML card for each article and inserts it into the container.
- * @param {Array<Object>} articles - The array of article objects loaded from JSON.
+ * @param {Array<Object>} articles
  */
 function renderArticleList(articles) {
   const container = document.getElementById("article-list-container");

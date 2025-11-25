@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tour — Trisog</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./output.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/2ce14ed893.js"
       crossorigin="anonymous"
@@ -52,7 +52,7 @@
       class="bg-white text-base text-blue-950 border-b border-gray-300 w-full h-20 z-50 sticky top-9 align-top"
     >
       <nav class="navbar p-3 flex items-center justify-between max-[90%] mx-12">
-        <img src="/images/Slice_5-removebg-preview.png" class="logo" />
+        <img src="./images/Slice_5-removebg-preview.png" class="logo" />
         <ul class="flex gap-5 mr-64 -ml-32">
           <li>
             <a class="cursor-pointer hover:text-red-400" href="index.html"
@@ -65,7 +65,7 @@
             >
           </li>
           <li>
-            <a class="cursor-pointer hover:text-red-400" href="Destination"
+            <a class="cursor-pointer hover:text-red-400" href="destination.html"
               >Destination</a
             >
           </li>
@@ -133,7 +133,7 @@
             <div class="bg-white rounded-lg shadow overflow-hidden">
               <div class="relative">
                 <img
-                  src="../images/pexels-photo-4254555.jpeg"
+                  src="./images/pexels-photo-4254555.jpeg"
                   alt="Budapest, Hungary - Wonders of the West Coast & Kimberley"
                   class="w-full h-80 object-cover"
                 />
@@ -795,7 +795,7 @@
                 <div class="shrink-0">
                   <img
                     class="h-16 w-16 rounded-full object-cover"
-                    src="../images/enza-53579-high-profile-poplin-cap_A6-1871-53579.gif"
+                    src="./images/enza-53579-high-profile-poplin-cap_A6-1871-53579.gif"
                     alt="Sindy Simmons"
                   />
                 </div>
@@ -973,11 +973,11 @@
               class="bg-gray-100 rounded-lg shadow p-6 border border-gray-100"
             >
               <div class="mb-4">
-                <span class="text-3xl font-bold text-gray-900">$104</span>
-                <span class="text-base text-gray-500">/ per person</span>
+                <span class="text-3xl font-bold text-gray-900">$150</span>
+                <span class="text-base text-gray-500">/ per adult</span>
               </div>
 
-              <form class="space-y-6">
+              <form class="space-y-6" id="booking-form">
                 <div>
                   <label
                     for="date"
@@ -1023,79 +1023,97 @@
                   <label class="block text-sm font-semibold text-gray-900"
                     >Ticket</label
                   >
-
-                  <div class="space-y-3">
+                  <div class="space-y-3 quantity-container">
                     <div class="flex items-center justify-between">
-                      <span class="text-gray-700">Adults (18+ years)</span>
+                      <span class="text-gray-700"
+                        >Adults (18+ years)
+                        <span
+                          class="font-bold text-blue-600 ml-2"
+                          data-price="150"
+                          >$150</span
+                        >
+                      </span>
                       <div class="flex items-center space-x-2">
                         <button
                           type="button"
-                          class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded text-xl text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-red-500"
+                          class="decrement border border-gray-300 rounded p-1 text-sm"
                         >
-                          &minus;
+                          <i class="fa-solid fa-minus text-sm"></i>
                         </button>
                         <input
                           type="number"
                           value="0"
                           min="0"
-                          class="w-8 text-center border border-gray-300 text-lg font-semibold bg-gray-100 rounded text-gray-600"
-                          readonly
+                          class="qty-display w-8 text-center border border-gray-300 text-lg font-semibold bg-gray-100 rounded text-gray-600 no-spin"
+                          data-age-group="adult"
                         />
                         <button
                           type="button"
-                          class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded text-xl text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-red-500"
+                          class="increment border border-gray-300 rounded p-1 text-sm"
                         >
-                          +
+                          <i class="fa-solid fa-plus"></i>
                         </button>
                       </div>
                     </div>
-
                     <div class="flex items-center justify-between">
-                      <span class="text-gray-700">Kids (12+ years)</span>
+                      <span class="text-gray-700"
+                        >Kids (12-17 years)
+                        <span
+                          class="font-bold text-green-600 ml-2"
+                          data-price="120"
+                          >$120</span
+                        >
+                      </span>
                       <div class="flex items-center space-x-2">
                         <button
                           type="button"
-                          class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded text-xl text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-red-500"
+                          class="decrement border border-gray-300 rounded p-1 text-sm"
                         >
-                          &minus;
+                          <i class="fa-solid fa-minus text-sm"></i>
                         </button>
                         <input
                           type="number"
                           value="0"
                           min="0"
-                          class="w-8 text-center border border-gray-300 text-lg font-semibold bg-gray-100 rounded text-gray-600"
-                          readonly
+                          class="qty-display w-8 text-center border border-gray-300 text-lg font-semibold bg-gray-100 rounded text-gray-600"
+                          data-age-group="kid"
                         />
                         <button
                           type="button"
-                          class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded text-xl text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-red-500"
+                          class="increment border border-gray-300 rounded p-1 text-sm"
                         >
-                          +
+                          <i class="fa-solid fa-plus"></i>
                         </button>
                       </div>
                     </div>
-
                     <div class="flex items-center justify-between">
-                      <span class="text-gray-700">Children (3+ years)</span>
+                      <span class="text-gray-700"
+                        >Children (3-11 years)
+                        <span
+                          class="font-bold text-green-600 ml-2"
+                          data-price="75"
+                          >$75</span
+                        >
+                      </span>
                       <div class="flex items-center space-x-2">
                         <button
                           type="button"
-                          class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded text-xl text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-red-500"
+                          class="decrement border border-gray-300 rounded p-1 text-sm"
                         >
-                          &minus;
+                          <i class="fa-solid fa-minus text-sm"></i>
                         </button>
                         <input
                           type="number"
                           value="0"
                           min="0"
-                          class="w-8 text-center border border-gray-300 text-lg font-semibold bg-gray-100 rounded text-gray-600"
-                          readonly
+                          class="qty-display w-8 text-center border border-gray-300 text-lg font-semibold bg-gray-100 rounded text-gray-600"
+                          data-age-group="child"
                         />
                         <button
                           type="button"
-                          class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded text-xl text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-red-500"
+                          class="increment border border-gray-300 rounded p-1 text-sm"
                         >
-                          +
+                          <i class="fa-solid fa-plus"></i>
                         </button>
                       </div>
                     </div>
@@ -1106,11 +1124,14 @@
                   class="flex items-center justify-between pt-4 border-t border-gray-200"
                 >
                   <span class="text-lg font-bold text-gray-900">Total</span>
-                  <span class="text-2xl font-bold text-red-500">$104</span>
+                  <span class="text-2xl font-bold text-red-500" id="total-price"
+                    >$0</span
+                  >
                 </div>
 
                 <button
                   type="submit"
+                  id="book-now"
                   class="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-3 rounded-md transition focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
                 >
                   Book now
@@ -1135,7 +1156,7 @@
           >
             <div class="relative">
               <img
-                src="/images/tour-1.png"
+                src="./images/tour-1.png"
                 class="w-full h-56 object-cover"
                 alt="Wonders of the West Coast & Kimberley"
               />
@@ -1183,7 +1204,7 @@
           >
             <div class="relative">
               <img
-                src="/images/images (1).jpg"
+                src="./images/images (1).jpg"
                 class="w-full h-56 object-cover"
                 alt="Windsor Castle, and Bath from London"
               />
@@ -1228,7 +1249,7 @@
           >
             <div class="relative">
               <img
-                src="/images/1c67eeb6284d7bafb12b8767901bf3e7.jpg"
+                src="./images/1c67eeb6284d7bafb12b8767901bf3e7.jpg"
                 class="w-full h-56 object-cover"
                 alt="Enchanting Great Barrier Reef, Aquatic Wonderland"
               />
@@ -1273,7 +1294,7 @@
           >
             <div class="relative">
               <img
-                src="/images//pexels-photo-14044466.webp"
+                src="./images//pexels-photo-14044466.webp"
                 class="w-full h-56 object-cover"
                 alt="Ancient Heritage and Desert Adventures"
               />
@@ -1528,6 +1549,142 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+      // Select the container with all quantity controls
+      const quantityContainer = document.querySelector(".quantity-container");
+
+      // Attach click listener for all increment/decrement buttons
+      quantityContainer.addEventListener("click", (e) => {
+        const btn = e.target.closest("button");
+        if (!btn) return;
+
+        const input = btn.parentElement.querySelector(".qty-display");
+        let currentQty = parseInt(input.value);
+
+        if (btn.classList.contains("increment")) {
+          currentQty++;
+        } else if (btn.classList.contains("decrement") && currentQty > 0) {
+          currentQty--;
+        }
+
+        input.value = currentQty;
+        updateTotal();
+      });
+
+      // Update total dynamically based on individual prices
+      function updateTotal() {
+        const inputs = document.querySelectorAll(".qty-display");
+        let total = 0;
+
+        inputs.forEach((input) => {
+          const qty = parseInt(input.value);
+          // Go up to the outer flex wrapper to find the correct data-price
+          const wrapper = input.closest(".flex.items-center.justify-between");
+          const price = parseInt(
+            wrapper.querySelector("[data-price]").dataset.price
+          );
+          total += qty * price;
+        });
+
+        document.getElementById("total-price").textContent = `$${total}`;
+      }
+
+      // Book Now button functionality
+      const bookNowBtn = document.getElementById("book-now");
+
+      bookNowBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const inputs = document.querySelectorAll(".qty-display");
+        const adultQty = parseInt(inputs[0].value);
+        const kidsQty = parseInt(inputs[1].value);
+        const childrenQty = parseInt(inputs[2].value);
+
+        const adultPrice = parseInt(
+          inputs[0]
+            .closest(".flex.items-center.justify-between")
+            .querySelector("[data-price]").dataset.price
+        );
+        const kidsPrice = parseInt(
+          inputs[1]
+            .closest(".flex.items-center.justify-between")
+            .querySelector("[data-price]").dataset.price
+        );
+        const childrenPrice = parseInt(
+          inputs[2]
+            .closest(".flex.items-center.justify-between")
+            .querySelector("[data-price]").dataset.price
+        );
+
+        const totalAmount =
+          adultQty * adultPrice +
+          kidsQty * kidsPrice +
+          childrenQty * childrenPrice;
+
+        if (adultQty + kidsQty + childrenQty === 0) {
+          Swal.fire("Oops", "Please select at least one traveler.", "error");
+          return;
+        }
+
+        Swal.fire({
+          icon: "success",
+          // Simpler, centered title
+          title: "<strong>Booking Confirmed!</strong>",
+          html: `
+        <div style="text-align:center; line-height:1.6; font-family:sans-serif; font-size:1em; color:#333;">
+            <div style="
+                display: grid;
+                grid-template-columns: 1fr 1fr; 
+                gap: 10px 5px; 
+                padding: 10px;
+                margin-bottom: 15px;
+                border-radius: 8px;
+                background-color: #f7f7f7; /* Single, light, neutral color */
+            ">
+                <div style="text-align: left;">Adults:</div>
+                <div style="text-align: left;">
+                    ${adultQty} x $${adultPrice} = <strong>$${
+            adultQty * adultPrice
+          }</strong>
+                </div>
+                
+                <div style="text-align: left;">Kids:</div>
+                <div style="text-align: left;">
+                    ${kidsQty} x $${kidsPrice} = <strong>$${
+            kidsQty * kidsPrice
+          }</strong>
+                </div>
+
+                <div style="text-align: left;">Children:</div>
+                <div style="text-align: left;">
+                    ${childrenQty} x $${childrenPrice} = <strong>$${
+            childrenQty * childrenPrice
+          }</strong>
+                </div>
+            </div>
+
+            <div style="
+                padding: 10px; 
+                background:#e6ffe6; /* Light green/cohesive background */
+                border-radius:8px; 
+                font-size:1.2em; 
+                border: 1px solid #ccebcc;
+                margin-top: 10px;
+            ">
+                <strong>Total: $${totalAmount}</strong>
+            </div>
+        </div>
+    `,
+          confirmButtonColor: "#4CAF50", // A classic, clean green
+          confirmButtonText: "Done",
+          showCloseButton: true,
+          width: "400px",
+        }).then(() => {
+          // Reset quantities
+          inputs.forEach((input) => (input.value = 0));
+          updateTotal();
+        });
+      });
+    </script>
   </body>
 </html>
